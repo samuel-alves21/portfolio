@@ -1,17 +1,22 @@
 import styled from "styled-components"
-import { HeaderImage } from "./HeaderImage"
-import { Title } from "./Title"
-import { Description } from "./Description"
-import { Stack } from "./Stack"
 
-export function ProjectCard() {
+import { HeaderImage, HeaderImageProps } from "./HeaderImage"
+import { Title, TitleProps } from "./Title"
+import { Description, DescriptionProps } from "./Description"
+import { Stack, TechStackProps } from "./Stack"
+import { ProjectsLinks, ProjectsLinksProps } from "./ProjectsLinks"
+
+type ProjectCardProps = HeaderImageProps & TitleProps & DescriptionProps & TechStackProps & ProjectsLinksProps
+
+export function ProjectCard({ img, title, description, techStack, projectCodeLink, liveProjectLink }: ProjectCardProps) {
   return (
     <MainWrapper>
-      <HeaderImage />
+      <HeaderImage img={img}/>
       <InfoWrapper>
-        <Title />
-        <Description /> 
-        <Stack />
+        <Title title={title}/>
+        <Description description={description}/> 
+        <Stack techStack={techStack}/>
+        <ProjectsLinks projectCodeLink={projectCodeLink} liveProjectLink={liveProjectLink}/>
       </InfoWrapper>
     </MainWrapper>
   )
@@ -19,13 +24,12 @@ export function ProjectCard() {
 
 const MainWrapper = styled.div`
   background-color: #fff;
-  box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.40);
+  box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20);
   display: flex; 
-  gap: 20px;
   flex-direction: column;
   border-radius: 15px;
   object-fit: cover;
-  width: 400px;
+  width: 350px;
 
   & img {
     border-radius: 15px 15px 0 0;
@@ -34,8 +38,9 @@ const MainWrapper = styled.div`
 
 const InfoWrapper = styled.div`
   display: flex; 
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
-  padding: 0 10px;
+  padding: 15px;
   width: 100%;
+  z-index: 2;
 `

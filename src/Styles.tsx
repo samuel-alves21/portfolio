@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     --primary-color: #A501E6;
     --secundary-color: #003BE6;
     --tertiary-color: #666;
+    --quaternary-color: #42446E;
 
     position: relative;
   }
@@ -47,6 +48,12 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: normal;
   }
 
+  h5 {
+    font-size: 1.4rem;
+    color: var(--tertiary-color);
+    font-weight: normal;
+  }
+
   @media (max-width: ${breakingPoints.xxl}) {
     h1 {
       font-size: 3rem;
@@ -64,6 +71,10 @@ export const GlobalStyles = createGlobalStyle`
 
     h4 {
       font-size: 1.2rem;
+    }
+
+    h5 {
+      font-size: 1rem;
     }
   }
 `

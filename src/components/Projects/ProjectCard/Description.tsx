@@ -1,7 +1,18 @@
-export function Description() {
+import styled from "styled-components"
+
+export type DescriptionProps = {
+  description: string
+}
+
+export function Description({ description } :DescriptionProps) {
   return (
-    <p style={{textAlign: 'left'}}>
-      StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions.
-    </p>
+    <P>
+      {description}
+    </P>
   )
 }
+
+const P = styled.p`
+  text-align: left;
+  font-weight: 300;
+`

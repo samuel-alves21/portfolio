@@ -1,12 +1,16 @@
 import styled from "styled-components"
 
-export function Title() {
+export type TitleProps = {
+  title: string
+}
+
+export function Title({ title } :TitleProps) {
   return (
-    <H4>StudyPom</H4>
+    <H5>{title}</H5>
   )
 } 
 
-const H4 = styled.h4`
-  font-weight: bold;
+const H5 = styled.h5`
+  font-weight: medium;
   color: #000;
 `

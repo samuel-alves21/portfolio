@@ -1,7 +1,17 @@
-import { ImageWrapper } from "../../ImageWrapper";
+import styled from "styled-components";
 
-export function HeaderImage() {
+export type HeaderImageProps = {
+  img: string
+}
+
+export function HeaderImage({ img } :HeaderImageProps) {
   return (
-    <ImageWrapper src="img/studyPom.png" alt="Study Pom" size="100%"/>
+    <Img src={img} alt="Study Pom"/>
   )
 }
+
+const Img = styled.img`
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+`
