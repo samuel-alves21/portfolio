@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from "styled-components"
 
-function App() {
-  const [count, setCount] = useState(0)
+import { breakingPoints } from "./breakingPoints"
+import { About } from "./components/About"
+import { Nav } from "./components/Nav"
+import { TechStack } from "./components/TechStack"
+import { Projects } from "./components/Projects"
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <MainWrapper>
+      <Nav />
+      <About />
+      <TechStack />
+      <Projects />
+    </MainWrapper>
   )
 }
+
+const MainWrapper = styled.section`
+  margin: 0 auto;
+  padding: 20px 150px;
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+  gap: 200px; 
+  overflow-x: hidden;
+  position: relative;
+
+  @media (max-width: ${breakingPoints.xxl}) {
+    padding: 20px 50px;
+  }
+
+  @media (max-width: ${breakingPoints.lg}) {
+    padding: 20px 50px;
+    gap: 100px;
+  }
+
+  @media (max-width: ${breakingPoints.sm}) {
+    padding: 10px 15px;
+    gap: 100px;
+  }
+`
 
 export default App
