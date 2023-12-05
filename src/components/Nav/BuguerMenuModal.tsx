@@ -9,8 +9,6 @@ type WrapperProps = {
   $shouldDisplay: boolean
 }
 
-const closeIcon = 'img/closeIcon.svg'
-
 export function BuguerMenuModal() {
   const { shouldDisplay, setShouldDisplay } = useContext(NavContext) as NavContextType
 
@@ -19,7 +17,6 @@ export function BuguerMenuModal() {
     if (target.id === 'close-icon' || !target.classList.contains('modal')) {
       setShouldDisplay(false)
     }
-    console.log('clicked')
   }
 
   useEffect(() => {
@@ -38,7 +35,7 @@ export function BuguerMenuModal() {
       <Link href="" text="Projects" className='modal'/>
       <Link href="" text="Contact" className='modal'/>
       <div>
-        <ImageWrapper src={closeIcon} size='30px' alt="close icon" id="close-icon"/>
+        <ImageWrapper src='img/closeIcon.svg' size='30px' alt="close icon" id="close-icon"/>
       </div>
     </Wrapper>
   )
