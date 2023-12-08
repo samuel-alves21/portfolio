@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ImageWrapper } from "../../ImageWrapper"
+import { breakingPoints } from "../../../breakingPoints"
 
 export type ProjectsLinksProps = {
   liveProjectLink: string
@@ -10,11 +10,11 @@ export function ProjectsLinks({ liveProjectLink, projectCodeLink } :ProjectsLink
   return (
     <Wrapper>
       <LinkWrapper>
-        <ImageWrapper src="img/link-chain.svg" alt="link chain icon" size="25px"/>
+        <Img src="img/link-chain.svg" alt="link chain icon"/>
         <a href={liveProjectLink} target="_blank">Live Preview</a>
       </LinkWrapper>
       <LinkWrapper>
-        <ImageWrapper src="img/project-github.svg" alt="github icon" size="25px"/>
+        <Img src="img/project-github.svg" alt="github icon"/>
           <a href={projectCodeLink} target="_blank">View Code</a>
       </LinkWrapper>
     </Wrapper>
@@ -26,9 +26,17 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `
 
+const Img = styled.img`
+  width: 25px;
+`
+
 const LinkWrapper = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 20px;
+
+  @media (max-width: ${breakingPoints.md}) {
+    gap: 10px;
+  }
 
   & a {
     text-decoration: underline;

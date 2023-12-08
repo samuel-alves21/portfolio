@@ -5,6 +5,7 @@ import { Title, TitleProps } from "./Title"
 import { Description, DescriptionProps } from "./Description"
 import { Stack, TechStackProps } from "./Stack"
 import { ProjectsLinks, ProjectsLinksProps } from "./ProjectsLinks"
+import { breakingPoints } from "../../../breakingPoints"
 
 type ProjectCardProps = HeaderImageProps & TitleProps & DescriptionProps & TechStackProps & ProjectsLinksProps
 
@@ -33,6 +34,10 @@ const MainWrapper = styled.div`
 
   & img {
     border-radius: 15px 15px 0 0;
+  }
+
+  @media (max-width: ${breakingPoints.md}) {
+    width: 250px;
   }
 `
 

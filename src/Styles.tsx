@@ -13,6 +13,18 @@ export const GlobalStyles = createGlobalStyle`
     position: relative;
   }
 
+  .section-margin {
+    margin-top: 100px;
+
+    @media (max-width: ${breakingPoints.md}) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: ${breakingPoints.sm}) {
+      margin-top: 40px;
+    }
+  }
+
   * {
     margin: 0;
     padding: 0;

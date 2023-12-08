@@ -6,7 +6,7 @@ export function TechStack() {
   return (
     <Wrapper>
       <h1>My Tech Stack</h1>
-      <h4 style={{margin: '20px'}}>Technologies I’ve been working with recently</h4>
+      <h4 style={{marginTop: '20px'}}>Technologies I’ve been working with recently</h4>
       <Icons />
     </Wrapper>
   )

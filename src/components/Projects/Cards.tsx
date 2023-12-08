@@ -1,10 +1,11 @@
 import styled from "styled-components"
 
 import { ProjectCard } from "./ProjectCard"
+import { breakingPoints } from "../../breakingPoints"
 
 export function Cards() {
   return (
-    <Wrapper>
+    <Wrapper className="section-margin">
       <ProjectCard 
       img="img/studyPom.png" 
       title="StudyPom" 
@@ -13,10 +14,62 @@ export function Cards() {
       liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
       projectCodeLink="https://github.com/samuel-alves21/StudyPom"
       />
+            <ProjectCard 
+      img="img/studyPom.png" 
+      title="StudyPom" 
+      description="StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions."
+      techStack="Html, Css, Javascript"
+      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
+      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      />
+            <ProjectCard 
+      img="img/studyPom.png" 
+      title="StudyPom" 
+      description="StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions."
+      techStack="Html, Css, Javascript"
+      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
+      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      />
+                  <ProjectCard 
+      img="img/studyPom.png" 
+      title="StudyPom" 
+      description="StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions."
+      techStack="Html, Css, Javascript"
+      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
+      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      />
+                  <ProjectCard 
+      img="img/studyPom.png" 
+      title="StudyPom" 
+      description="StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions."
+      techStack="Html, Css, Javascript"
+      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
+      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      />
+                  <ProjectCard 
+      img="img/studyPom.png" 
+      title="StudyPom" 
+      description="StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions."
+      techStack="Html, Css, Javascript"
+      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
+      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      />
+      
     </Wrapper>
+    
   )
 }
 
 const Wrapper = styled.div`
-  
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  gap: 50px;
+
+  @media (max-width: ${breakingPoints.xl}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: ${breakingPoints.md}) {
+    gap: 25px;
+  }
 ` 

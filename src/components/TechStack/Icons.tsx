@@ -10,7 +10,7 @@ export function Icons() {
 
 
   return (
-    <Wrapper>
+    <Wrapper className="section-margin">
       <ImageWrapper src='img/js.svg' alt="javascript icon" size={size} title='JavaScript'/>
       <ImageWrapper src='img/html.svg' alt="html icon" size={size} title='Html'/> 
       <ImageWrapper src='img/css.svg' alt="css icon" size={size} title='Css'/>
@@ -31,7 +31,6 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 2fr);
   gap: 100px;
-  margin-top: 100px;
 
   @media (max-width: ${breakingPoints.xl}) {
     grid-template-columns: repeat(4, 3fr);
@@ -39,7 +38,6 @@ const Wrapper = styled.div`
 
   @media (max-width: ${breakingPoints.md}) {
     gap: 50px;
-    margin-top: 50px;
   }
 
   @media (max-width: ${breakingPoints.sm}) {

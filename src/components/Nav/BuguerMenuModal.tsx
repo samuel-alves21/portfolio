@@ -23,7 +23,7 @@ export function BuguerMenuModal() {
     document.addEventListener('click', handleClick)
 
     return () => {
-      document.addEventListener('click', handleClick)
+      document.removeEventListener('click', handleClick)
     }
   })
 
