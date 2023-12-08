@@ -18,10 +18,10 @@ export function Navigationlinks() {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: var(--gap-5);
 
   @media (max-width: ${breakingPoints.xxl}) {
-    gap: 30px;
+    gap: var(--gap-3);
   }
 `
 

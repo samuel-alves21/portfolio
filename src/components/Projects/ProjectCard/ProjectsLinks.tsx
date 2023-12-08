@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 import { breakingPoints } from "../../../breakingPoints"
 
 export type ProjectsLinksProps = {
@@ -28,14 +29,18 @@ const Wrapper = styled.div`
 
 const Img = styled.img`
   width: 25px;
+
+  @media (max-width: ${breakingPoints.sm}) {
+    width: 16px;
+  }
 `
 
 const LinkWrapper = styled.div`
   display: flex;
-  gap: 20px;
+  gap: var(--gap-2);
 
   @media (max-width: ${breakingPoints.md}) {
-    gap: 10px;
+    gap: var(--gap-1);
   }
 
   & a {

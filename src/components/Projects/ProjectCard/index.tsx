@@ -39,6 +39,10 @@ const MainWrapper = styled.div`
   @media (max-width: ${breakingPoints.md}) {
     width: 250px;
   }
+
+  @media (max-width: ${breakingPoints.sm}) {
+    width: 100%;
+  }
 `
 
 const InfoWrapper = styled.div`
@@ -46,6 +50,10 @@ const InfoWrapper = styled.div`
   gap: 15px;
   flex-direction: column;
   padding: 15px;
-  width: 100%;
   z-index: 2;
+
+  @media (max-width: ${breakingPoints.sm}) {
+    padding: 10px;
+    gap: var(--gap-1);
+  }
 `

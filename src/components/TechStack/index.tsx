@@ -18,4 +18,5 @@ const Wrapper = styled.section`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  width: 100%;
 `

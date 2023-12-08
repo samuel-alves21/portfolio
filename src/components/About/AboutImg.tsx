@@ -1,14 +1,10 @@
 import styled from "styled-components"
 import { useMediaQuery } from 'react-responsive'
-
-import { ImageWrapper } from "../ImageWrapper"
 import { breakingPoints } from "../../breakingPoints"
 
 type WrapperProps = {
   size: string
 }
-
-const myimage = 'img/myPhoto03.png'
 
 export function AboutImg() {
   const xxl = useMediaQuery({ query: `(max-width: ${breakingPoints.xxl})` })
@@ -17,7 +13,7 @@ export function AboutImg() {
 
   return (
     <Wrapper size={size}>
-      <ImageWrapper src={myimage} alt={'developer image'} size={size}/>
+      <img src='img/myPhoto03.png' alt='developer image'/>
     </Wrapper>
   )
 } 
@@ -29,4 +25,8 @@ const Wrapper = styled.div<WrapperProps>`
   overflow: hidden;
   object-fit: cover;
   border: 8px solid #A501E6;
+
+  & img {
+    width:  ${({ size }) => size};
+  }
 `

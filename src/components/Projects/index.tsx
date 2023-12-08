@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 import { Cards } from "./Cards"
 
 export function Projects() {
@@ -17,4 +18,5 @@ const Wrapper = styled.section`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  width: 100%;
 `

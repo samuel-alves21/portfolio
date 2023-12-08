@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { breakingPoints } from "../../../breakingPoints";
 
 export type HeaderImageProps = {
@@ -18,5 +19,9 @@ const Img = styled.img`
 
   @media (max-width: ${breakingPoints.md}) {
     height: 150px;
+  }
+
+  @media (max-width: ${breakingPoints.sm}) {
+    height: 100px;
   }
 `

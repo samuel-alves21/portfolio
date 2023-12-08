@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 import { Link } from "../Link"
-import { ImageWrapper } from "../ImageWrapper"
 import { useEffect, useContext } from "react"
 import { NavContext, NavContextType } from "../../context"
 
@@ -35,7 +34,7 @@ export function BuguerMenuModal() {
       <Link href="" text="Projects" className='modal'/>
       <Link href="" text="Contact" className='modal'/>
       <div>
-        <ImageWrapper src='img/closeIcon.svg' size='30px' alt="close icon" id="close-icon"/>
+        <img src='img/closeIcon.svg' alt="close icon" id="close-icon"/>
       </div>
     </Wrapper>
   )
@@ -47,7 +46,7 @@ const Wrapper = styled.aside<WrapperProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: var(--gap-2);
   padding: 20px;
   top: -23px;
   transition: right 0.3s ease-in-out;
@@ -60,6 +59,10 @@ const Wrapper = styled.aside<WrapperProps>`
 
   & a::after {
     background-color: #fff;
+  }
+
+  & img {
+    width: 20px;
   }
 
   & img:hover {

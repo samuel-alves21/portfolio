@@ -10,19 +10,32 @@ export const GlobalStyles = createGlobalStyle`
     --tertiary-color: #666;
     --quaternary-color: #42446E;
 
+    --gap-1 : 10px;
+    --gap-2 : 20px;
+    --gap-3 : 30px;
+    --gap-4 : 40px;
+    --gap-5 : 50px;
+    --gap-10 : 100px;
+
+    --margin-1 : 10px;
+    --margin-2 : 20px;
+    --margin-3 : 30px;
+    --margin-4 : 40px;
+    --margin-5 : 50px;
+    --margin-10 : 100px;
+
+    --padding-1 : 10px;
+    --padding-2 : 20px;
+    --padding-3 : 30px;
+    --padding-4 : 40px;
+    --padding-5 : 50px;
+    --padding-10 : 100px;
+
     position: relative;
   }
 
   .section-margin {
     margin-top: 100px;
-
-    @media (max-width: ${breakingPoints.md}) {
-      margin-top: 50px;
-    }
-
-    @media (max-width: ${breakingPoints.sm}) {
-      margin-top: 40px;
-    }
   }
 
   * {
@@ -34,15 +47,16 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var( --tertiary-color)
+    color: var( --tertiary-color);
   }
 
   a:visited {
-    color: var( --tertiary-color)
+    color: var( --tertiary-color);
   }
 
   p {
-    color: var( --tertiary-color)
+    color: var( --tertiary-color);
+    font-size: 1rem;
   }
 
   h1 {
@@ -72,7 +86,17 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  @media (max-width: ${breakingPoints.md}) {
+      .section-margin {
+        margin-top: 50px;
+      }
+    }
+
   @media (max-width: ${breakingPoints.sm}) {
+    .section-margin {
+      margin-top: 40px;
+    }
+
     h1 {
       font-size: 2.2rem;
     }
@@ -87,6 +111,14 @@ export const GlobalStyles = createGlobalStyle`
 
     h5 {
       font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+
+    a {
+      font-size: 0.7rem;
     }
   }
 `

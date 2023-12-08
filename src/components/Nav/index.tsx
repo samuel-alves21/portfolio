@@ -31,16 +31,16 @@ const MainWrapper = styled.div`
 
 const LinksWrapper = styled.div`
   display: flex;
-  gap: 50px; 
+  gap: var(--gap-5); 
   align-items: center;
   position: relative;
 
   @media (max-width: ${breakingPoints.xxl}) {
-    gap: 30px;
+    gap: var(--gap-3);
   }
 
   @media (max-width: ${breakingPoints.lg}) {
-    gap: 20px;
+    gap: var(--gap-2);
   }
 `
 

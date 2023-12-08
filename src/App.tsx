@@ -33,12 +33,12 @@ const MainWrapper = styled.section`
 
   @media (max-width: ${breakingPoints.lg}) {
     padding: 20px 50px;
-    gap: 100px;
+    gap: var(--gap-10);
   }
 
   @media (max-width: ${breakingPoints.sm}) {
     padding: 10px 15px;
-    gap: 100px;
+    gap: var(--gap-10);
   }
 `
 

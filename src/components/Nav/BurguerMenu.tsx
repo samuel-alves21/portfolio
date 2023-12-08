@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { useContext } from "react"
 
-import { ImageWrapper } from "../ImageWrapper"
 import { NavContext, NavContextType } from "../../context"
 
 const burguerMenu = 'img/burguerMenu.svg'
@@ -11,7 +10,7 @@ export function BurguerMenu() {
 
   return (
     <Wrapper onClick={() => setShouldDisplay(true)}>
-      <ImageWrapper src={burguerMenu} alt="menu burguer" size="40px" className='modal'/>
+      <img src={burguerMenu} alt="menu burguer" className='modal'/>
     </Wrapper>
   )
 } 
@@ -22,7 +21,8 @@ const Wrapper = styled.div`
 
     & img {
       transition: opacity  0.3s;
-      opacity: 0.5
+      opacity: 0.5;
+      width: 40px;
     }
   }
 `

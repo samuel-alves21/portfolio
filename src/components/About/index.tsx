@@ -22,6 +22,6 @@ const Wrapper = styled.div`
     flex-direction: column-reverse;
     justify-content: space-evenly;
     text-align: center;
-    gap: 30px;
+    gap: var(--gap-3);
   }
 `
