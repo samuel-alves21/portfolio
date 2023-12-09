@@ -14,10 +14,14 @@ export function ProjectCard({ img, title, description, techStack, projectCodeLin
     <MainWrapper>
       <HeaderImage img={img}/>
       <InfoWrapper>
-        <Title title={title}/>
-        <Description description={description}/> 
-        <Stack techStack={techStack}/>
-        <ProjectsLinks projectCodeLink={projectCodeLink} liveProjectLink={liveProjectLink}/>
+        <ContentWrapper>
+          <Title title={title}/>
+          <Description description={description}/> 
+        </ContentWrapper>
+        <ContentWrapper>
+          <Stack techStack={techStack}/>
+          <ProjectsLinks projectCodeLink={projectCodeLink} liveProjectLink={liveProjectLink}/>
+        </ContentWrapper>
       </InfoWrapper>
     </MainWrapper>
   )
@@ -30,14 +34,15 @@ const MainWrapper = styled.div`
   flex-direction: column;
   border-radius: 15px;
   object-fit: cover;
-  width: 350px;
 
   & img {
     border-radius: 15px 15px 0 0;
   }
 
   @media (max-width: ${breakingPoints.md}) {
-    width: 250px;
+      & p, & a {
+        font-size: 0.8rem;
+    }
   }
 
   @media (max-width: ${breakingPoints.sm}) {
@@ -47,13 +52,20 @@ const MainWrapper = styled.div`
 
 const InfoWrapper = styled.div`
   display: flex; 
+  height: 100%;
   gap: 15px;
   flex-direction: column;
+  justify-content: space-between;
   padding: 15px;
-  z-index: 2;
 
   @media (max-width: ${breakingPoints.sm}) {
     padding: 10px;
     gap: var(--gap-1);
   }
 `
+
+const ContentWrapper = styled.div`
+  display: flex; 
+  flex-direction: column;
+  gap: 15px;
+` 

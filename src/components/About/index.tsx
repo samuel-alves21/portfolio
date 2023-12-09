@@ -6,7 +6,7 @@ import { breakingPoints } from "../../breakingPoints"
 
 export function About() {
   return (
-    <Wrapper>
+    <Wrapper className="section-margin" id='about'>
       <AboutText /> 
       <AboutImg />
     </Wrapper>

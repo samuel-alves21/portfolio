@@ -27,11 +27,16 @@ const Wrapper = styled.div`
 
   & img {
       width: 100px;
+      margin: 0 auto;
     }
+
+  @media (max-width: ${breakingPoints.lg}) {
+    gap: var(--gap-7);
+  }
 
   @media (max-width: ${breakingPoints.xl}) {
     grid-template-columns: repeat(4, 3fr);
-  }
+  } 
 
   @media (max-width: ${breakingPoints.md}) {
     gap: var(--gap-5);
@@ -44,7 +49,6 @@ const Wrapper = styled.div`
   @media (max-width: ${breakingPoints.sm}) {
     grid-template-columns: repeat(3, 4fr);
     gap: var(--gap-4);
-    margin-top: 40px;
 
     & img {
       width: 60px;

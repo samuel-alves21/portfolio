@@ -5,10 +5,12 @@ import { About } from "./components/About"
 import { Nav } from "./components/Nav"
 import { TechStack } from "./components/TechStack"
 import { Projects } from "./components/Projects"
+import { BuguerMenuModal } from "./components/Nav/BuguerMenuModal"
 
 const App = () => {
   return (
     <MainWrapper>
+      <BuguerMenuModal />
       <Nav />
       <About />
       <TechStack />
@@ -32,7 +34,7 @@ const MainWrapper = styled.section`
   }
 
   @media (max-width: ${breakingPoints.lg}) {
-    padding: 20px 50px;
+    padding: 20px 25px;
     gap: var(--gap-10);
   }
 

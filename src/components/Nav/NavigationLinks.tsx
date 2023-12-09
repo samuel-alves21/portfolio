@@ -2,15 +2,14 @@ import styled from "styled-components"
 
 import { breakingPoints } from "../../breakingPoints"
 import { Link } from "../Link"
+import { links } from "../../links"
 
 export function Navigationlinks() {
   return (
     <Wrapper>
-      <Link href="" text="Home" />
-      <Link href="" text="About" />
-      <Link href="" text="Tech Stack" /> 
-      <Link href="" text="Projects" />
-      <Link href="" text="Contact" />
+      {links.map((link, index) => (
+        <Link key={index} href={link.href} text={link.text} />
+      ))}
     </Wrapper>
   )
 }

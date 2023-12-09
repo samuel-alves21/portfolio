@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     --primary-color: #A501E6;
     --secundary-color: #003BE6;
     --tertiary-color: #666;
+    --tertiary-color-light: #929292;
     --quaternary-color: #42446E;
 
     --gap-1 : 10px;
@@ -15,27 +16,31 @@ export const GlobalStyles = createGlobalStyle`
     --gap-3 : 30px;
     --gap-4 : 40px;
     --gap-5 : 50px;
+    --gap-6 : 60px;
+    --gap-7 : 70px;
+    --gap-8 : 80px;
+    --gap-9 : 90px;
     --gap-10 : 100px;
 
-    --margin-1 : 10px;
-    --margin-2 : 20px;
-    --margin-3 : 30px;
-    --margin-4 : 40px;
-    --margin-5 : 50px;
-    --margin-10 : 100px;
-
-    --padding-1 : 10px;
-    --padding-2 : 20px;
-    --padding-3 : 30px;
-    --padding-4 : 40px;
-    --padding-5 : 50px;
-    --padding-10 : 100px;
-
     position: relative;
+    scroll-behavior: smooth;
+    
+    ::selection {
+      background-color: var(--tertiary-color);
+      color: #fff;
+    }
   }
 
   .section-margin {
-    margin-top: 100px;
+    margin-top: var(--gap-10);
+  }
+
+  .subtitle-margin {
+    margin-top: var(--gap-1);
+  }
+
+  .nav-scroll {
+    background-color: var(--tertiary-color-light);
   }
 
   * {
@@ -87,14 +92,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   @media (max-width: ${breakingPoints.md}) {
-      .section-margin {
-        margin-top: 50px;
-      }
+    .section-margin {
+      margin-top: var(--gap-5);
+    }
     }
 
   @media (max-width: ${breakingPoints.sm}) {
-    .section-margin {
-      margin-top: 40px;
+    .subtitle-margin {
+      margin-top: var(--gap-1);
     }
 
     h1 {

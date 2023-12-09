@@ -25,6 +25,7 @@ export function ProjectsLinks({ liveProjectLink, projectCodeLink } :ProjectsLink
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: var(--gap-1);
 `
 
 const Img = styled.img`
@@ -37,9 +38,10 @@ const Img = styled.img`
 
 const LinkWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: var(--gap-2);
 
-  @media (max-width: ${breakingPoints.md}) {
+  @media (max-width: ${breakingPoints.xl}) {
     gap: var(--gap-1);
   }
 

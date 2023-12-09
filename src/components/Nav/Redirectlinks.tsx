@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-const githubImg = 'img/github.svg'
-const linkedInImg = 'img/linkedin.svg'
+import { breakingPoints } from '../../breakingPoints'
 
 export function Redirectlinks() {
   return (
     <Wrapper>
-      <a href="https://github.com/samuel-alves21" target='_blank'><img src={githubImg} alt="github icon" /></a>
-      <a href="https://www.linkedin.com/in/samuel-theodoro/" target='_blank'><img src={linkedInImg} alt="linkedIn icon" /></a>
+      <a href="https://github.com/samuel-alves21" target='_blank'><img src='img/github.svg' alt="github icon" /></a>
+      <a href="https://www.linkedin.com/in/samuel-theodoro/" target='_blank'><img src='img/linkedin.svg' alt="linkedIn icon" /></a>
     </Wrapper>
   )
 }
@@ -22,5 +21,11 @@ const Wrapper = styled.div`
 
   & img {
     width: 40px;
+  }
+
+  @media (max-width: ${breakingPoints.sm}) {
+      & img {
+      width: 30px;
+    }
   }
 `

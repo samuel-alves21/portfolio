@@ -1,8 +1,9 @@
 import styled from "styled-components"
+import { useEffect, useContext } from "react"
 
 import { Link } from "../Link"
-import { useEffect, useContext } from "react"
 import { NavContext, NavContextType } from "../../context"
+import { links } from "../../links"
 
 type WrapperProps = {
   $shouldDisplay: boolean
@@ -28,11 +29,9 @@ export function BuguerMenuModal() {
 
   return (
     <Wrapper $shouldDisplay={shouldDisplay} className='modal'>
-      <Link href="" text="Home" className='modal'/>
-      <Link href="" text="About" className='modal'/>
-      <Link href="" text="Tech Stack" className='modal'/> 
-      <Link href="" text="Projects" className='modal'/>
-      <Link href="" text="Contact" className='modal'/>
+      {links.map((link, index) => (
+        <Link key={index} href={link.href} text={link.text} />
+      ))}
       <div>
         <img src='img/closeIcon.svg' alt="close icon" id="close-icon"/>
       </div>
@@ -41,16 +40,16 @@ export function BuguerMenuModal() {
 }
 
 const Wrapper = styled.aside<WrapperProps>`
-  position: absolute;
+  position: fixed;
   background-color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--gap-2);
   padding: 20px;
-  top: -23px;
+  top: 0px;
   transition: right 0.3s ease-in-out;
-  ${({ $shouldDisplay }) => $shouldDisplay ? 'right: -52px;' : 'right: -205px;'};
+  ${({ $shouldDisplay }) => $shouldDisplay ? 'right: 0px;' : 'right: -200px;'};
   z-index: 10;
 
   & a, a:visited {

@@ -5,28 +5,61 @@ import { Navigationlinks } from "./NavigationLinks"
 import { Redirectlinks } from "./Redirectlinks"
 import { breakingPoints } from "../../breakingPoints"
 import { BurguerMenu } from "./BurguerMenu"
-import { BuguerMenuModal } from "./BuguerMenuModal"
+import { useState } from "react"
+
+type MainWrapperProps = {
+  $hasScrolled: boolean;
+}
 
 export function Nav() {
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  window.onscroll = () => {
+    if (window.scrollY > 50) {
+      setHasScrolled(true)
+    } else {
+      setHasScrolled(false)
+    }
+  } 
+
   const lg = useMediaQuery({ query: `(max-width: ${breakingPoints.lg})` })
 
   return (
-    <MainWrapper>
+    <MainWrapper $hasScrolled={hasScrolled}>
       <Name>Samuel Alves</Name>
       <LinksWrapper>
         {lg || <Navigationlinks />}
         <Redirectlinks />
         {lg && <BurguerMenu />}
-        {lg && <BuguerMenuModal />}
       </LinksWrapper>
     </MainWrapper>
   )
 }
 
-const MainWrapper = styled.div`
+const MainWrapper = styled.div<MainWrapperProps>`
+  transition: background-color 0.3s ease-in-out;
+
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  padding: 10px 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${({ $hasScrolled }) => $hasScrolled ? 'background-color: var(--tertiary-color-light);' : 'background-color: transparent;' }
+
+  @media (max-width: ${breakingPoints.xxl}) {
+    padding: 10px 50px;
+  }
+
+  @media (max-width: ${breakingPoints.lg}) {
+    padding: 10px 25px;
+  }
+
+  @media (max-width: ${breakingPoints.sm}) {
+    padding: 6px 15px;
+  }
 `
 
 const LinksWrapper = styled.div`

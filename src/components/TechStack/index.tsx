@@ -4,9 +4,9 @@ import { Icons } from "./Icons"
 
 export function TechStack() {
   return (
-    <Wrapper>
+    <Wrapper id='tech-stack'>
       <h1>My Tech Stack</h1>
-      <h4 style={{marginTop: '20px'}}>Technologies I’ve been working with recently</h4>
+      <h4 className="subtitle-margin">Technologies I’ve been working with recently</h4>
       <Icons />
     </Wrapper>
   )

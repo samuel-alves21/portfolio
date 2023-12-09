@@ -4,9 +4,9 @@ import { Cards } from "./Cards"
 
 export function Projects() {
   return (
-    <Wrapper>
+    <Wrapper id='projects'>
       <h1>Projects</h1>
-      <h4 style={{marginTop: '20px'}}>Things I’ve built so far</h4>
+      <h4 className="subtitle-margin">Things I’ve built so far</h4>
       <Cards />
     </Wrapper>
   )
