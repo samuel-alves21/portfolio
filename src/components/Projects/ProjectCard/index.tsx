@@ -28,15 +28,22 @@ export function ProjectCard({ img, title, description, techStack, projectCodeLin
 }
 
 const MainWrapper = styled.div`
+  width: min(350px, 100%);
+  height: 100%;
   background-color: #fff;
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20);
   display: flex; 
   flex-direction: column;
   border-radius: 15px;
   object-fit: cover;
+  margin: 0 auto;
 
   & img {
     border-radius: 15px 15px 0 0;
+  }
+
+  @media (max-width: ${breakingPoints.xxl}) {
+    width: initial;
   }
 
   @media (max-width: ${breakingPoints.md}) {
@@ -59,7 +66,7 @@ const InfoWrapper = styled.div`
   padding: 15px;
 
   @media (max-width: ${breakingPoints.sm}) {
-    padding: 10px;
+    padding: var(--gap-1);
     gap: var(--gap-1);
   }
 `

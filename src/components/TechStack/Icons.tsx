@@ -21,8 +21,9 @@ export function Icons() {
 } 
 
 const Wrapper = styled.div`
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 2fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--gap-10);
 
   & img {
@@ -32,6 +33,7 @@ const Wrapper = styled.div`
 
   @media (max-width: ${breakingPoints.lg}) {
     gap: var(--gap-7);
+    width: initial;
   }
 
   @media (max-width: ${breakingPoints.xl}) {

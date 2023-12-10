@@ -30,7 +30,7 @@ export function BuguerMenuModal() {
   return (
     <Wrapper $shouldDisplay={shouldDisplay} className='modal'>
       {links.map((link, index) => (
-        <Link key={index} href={link.href} text={link.text} />
+        <Link key={index} destinationId={link.href} text={link.text} />
       ))}
       <div>
         <img src='img/closeIcon.svg' alt="close icon" id="close-icon"/>
@@ -46,17 +46,17 @@ const Wrapper = styled.aside<WrapperProps>`
   flex-direction: column;
   align-items: center;
   gap: var(--gap-2);
-  padding: 20px;
+  padding: var(--gap-2);
   top: 0px;
   transition: right 0.3s ease-in-out;
   ${({ $shouldDisplay }) => $shouldDisplay ? 'right: 0px;' : 'right: -200px;'};
   z-index: 10;
 
-  & a, a:visited {
+  & span, span:visited {
     color: #fff;
   }
 
-  & a::after {
+  & span::after {
     background-color: #fff;
   }
 

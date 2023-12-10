@@ -60,8 +60,11 @@ export function Cards() {
 }
 
 const Wrapper = styled.div`
-  width: min(1100px, 100%);
+  /* width: min(1100px, 100%); */
+  width: 100%;
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns:  repeat(3, 1fr);
   gap: var(--gap-5);
 

@@ -4,14 +4,19 @@ import { breakingPoints } from '../../breakingPoints'
 export function Redirectlinks() {
   return (
     <Wrapper>
-      <a href="https://github.com/samuel-alves21" target='_blank'><img src='img/github.svg' alt="github icon" /></a>
-      <a href="https://www.linkedin.com/in/samuel-theodoro/" target='_blank'><img src='img/linkedin.svg' alt="linkedIn icon" /></a>
+      <a href="https://github.com/samuel-alves21" target='_blank'>
+        <img src='img/github.svg' alt="giyhub icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/samuel-theodoro/" target='_blank'>
+        <img src='img/linkedin.svg' alt="linkedIn icon" />
+      </a>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: var(--gap-2);
 
   & a:hover {
@@ -20,7 +25,7 @@ const Wrapper = styled.div`
   }
 
   & img {
-    width: 40px;
+    width: 35px;
   }
 
   @media (max-width: ${breakingPoints.sm}) {

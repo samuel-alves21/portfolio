@@ -26,7 +26,7 @@ export function Nav() {
 
   return (
     <MainWrapper $hasScrolled={hasScrolled}>
-      <Name>Samuel Alves</Name>
+      <Name>SA</Name>
       <LinksWrapper>
         {lg || <Navigationlinks />}
         <Redirectlinks />
@@ -38,27 +38,32 @@ export function Nav() {
 
 const MainWrapper = styled.div<MainWrapperProps>`
   transition: background-color 0.3s ease-in-out;
-
+  max-width: 2000px;
   position: fixed;
+  margin: 0 auto;
   left: 0px;
   right: 0px;
   top: 0px;
-  padding: 10px 150px;
+  padding: var(--gap-1) var(--gap-15);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ${({ $hasScrolled }) => $hasScrolled ? 'background-color: var(--tertiary-color-light);' : 'background-color: transparent;' }
+  z-index: 3;
+  ${({ $hasScrolled }) => $hasScrolled ? 'background-color: var(--nav-color);' : 'background-color: transparent;' }
+  ${({ $hasScrolled }) => $hasScrolled && 'box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);' }
 
   @media (max-width: ${breakingPoints.xxl}) {
-    padding: 10px 50px;
+    padding: var(--gap-2) var(--gap-5);
   }
 
   @media (max-width: ${breakingPoints.lg}) {
-    padding: 10px 25px;
+    padding: var(--gap-2) var(--gap-2);
+    gap: var(--gap-10);
   }
 
   @media (max-width: ${breakingPoints.sm}) {
-    padding: 6px 15px;
+    padding: 5px var(--gap-1);
+    gap: var(--gap-10);
   }
 `
 

@@ -8,8 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     --primary-color: #A501E6;
     --secundary-color: #003BE6;
     --tertiary-color: #666;
-    --tertiary-color-light: #929292;
+    --tertiary-color-lighter: #b3b3b3;
     --quaternary-color: #42446E;
+
+    --nav-color: #f0f0f0;
 
     --gap-1 : 10px;
     --gap-2 : 20px;
@@ -21,12 +23,15 @@ export const GlobalStyles = createGlobalStyle`
     --gap-8 : 80px;
     --gap-9 : 90px;
     --gap-10 : 100px;
+    --gap-15 : 150px;
+    --gap-20 : 200px;
+    --gap-25 : 250px;
 
     position: relative;
     scroll-behavior: smooth;
     
     ::selection {
-      background-color: var(--tertiary-color);
+      background-color: var(--tertiary-color-lighter);
       color: #fff;
     }
   }
@@ -61,7 +66,7 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     color: var( --tertiary-color);
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   h1 {
@@ -95,7 +100,7 @@ export const GlobalStyles = createGlobalStyle`
     .section-margin {
       margin-top: var(--gap-5);
     }
-    }
+  }
 
   @media (max-width: ${breakingPoints.sm}) {
     .subtitle-margin {
@@ -103,7 +108,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     h3 {
@@ -119,7 +124,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     p {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
 
     a {

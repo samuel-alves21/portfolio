@@ -46,7 +46,12 @@ const LinkWrapper = styled.div`
   }
 
   & a {
-    text-decoration: underline;
     color: #000;
+  }
+
+  & a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+    color: #757575;
   }
 `
