@@ -70,7 +70,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--secundary-color);
   }
 
