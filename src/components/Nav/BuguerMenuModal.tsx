@@ -2,20 +2,20 @@ import styled from "styled-components"
 import { useEffect, useContext } from "react"
 
 import { Link } from "../Link"
-import { NavContext, NavContextType } from "../../context"
 import { links } from "../../utils/links"
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 type WrapperProps = {
   $shouldDisplay: boolean
 }
 
 export function BuguerMenuModal() {
-  const { shouldDisplay, setShouldDisplay } = useContext(NavContext) as NavContextType
+  const { settingsState: { shouldDisplayNav }, settingsDispatch } = useContext(SettingsContext) as SettingsContextType
 
   const handleClick = (e: MouseEvent) => {
     const target = e.target as HTMLElement
     if (target.id === 'close-icon' || !target.classList.contains('modal')) {
-      setShouldDisplay(false)
+      settingsDispatch({ type: "CLOSE_NAV" })
     }
   }
 
@@ -28,7 +28,7 @@ export function BuguerMenuModal() {
   })
 
   return (
-    <Wrapper $shouldDisplay={shouldDisplay} className='modal'>
+    <Wrapper $shouldDisplay={shouldDisplayNav} className='modal'>
       {links.map((id, index) => (
         <Link key={index} destinationId={id} text={id.replace(id[0], id[0].toUpperCase())} />
       ))}

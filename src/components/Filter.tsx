@@ -1,18 +1,18 @@
 import styled from "styled-components"
 import { useContext } from "react"
-import { NavContext, NavContextType } from "../context"
+import { SettingsContext, SettingsContextType } from "../contexts/SettingsContext"
 
 type StyledFilterProps = {
   $shouldDisplay: boolean
 }
 
 export function Filter() {
-  const { shouldDisplay } = useContext(NavContext) as NavContextType
+  const { settingsState: { shouldDisplayNav } } = useContext(SettingsContext) as SettingsContextType
 
   return (
     <>
-      <BlackFilter $shouldDisplay={shouldDisplay}/>
-      <BlurFilter $shouldDisplay={shouldDisplay}/>
+      <BlackFilter $shouldDisplay={shouldDisplayNav}/>
+      <BlurFilter $shouldDisplay={shouldDisplayNav}/>
     </>
   )
 }

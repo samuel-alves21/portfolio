@@ -1,13 +1,14 @@
 import ReactDOM from 'react-dom/client'
+
 import App from './App.tsx'
 import { GlobalStyles } from './Styles.tsx'
-import { NavProvider } from './context/index.tsx'
 import { Filter } from './components/Filter.tsx'
+import { SettingsProvider } from './contexts/SettingsContext/index.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <NavProvider>
+  <SettingsProvider>
     <GlobalStyles />
     <Filter />
     <App />
-  </NavProvider>
+  </SettingsProvider>
 )

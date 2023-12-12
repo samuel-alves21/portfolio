@@ -1,16 +1,16 @@
 import styled from "styled-components"
 import { useContext } from "react"
 
-import { NavContext, NavContextType } from "../../context"
 import { breakingPoints } from "../../utils/breakingPoints"
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 const burguerMenu = 'img/burguerMenu.svg'
 
 export function BurguerMenu() {
-  const { setShouldDisplay } = useContext(NavContext) as NavContextType
+  const { settingsDispatch } = useContext(SettingsContext) as SettingsContextType
 
   return (
-    <Wrapper onClick={() => setShouldDisplay(true)}>
+    <Wrapper onClick={() => settingsDispatch({ type: "OPEN_NAV" })}>
       <img src={burguerMenu} alt="menu burguer" className='modal'/>
     </Wrapper>
   )
