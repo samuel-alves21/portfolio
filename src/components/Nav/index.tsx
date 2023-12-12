@@ -7,6 +7,7 @@ import { breakingPoints } from "../../utils/breakingPoints"
 import { BurguerMenu } from "./BurguerMenu"
 import { useState } from "react"
 import { Logo } from "../Logo"
+import { ToggleBtn } from "../ToggleBtn"
 
 type MainWrapperProps = {
   $hasScrolled: boolean;
@@ -29,6 +30,7 @@ export function Nav() {
     <MainWrapper $hasScrolled={hasScrolled}>
       <Logo />
       <LinksWrapper>
+      <ToggleBtn />
         {lg || <Navigationlinks />}
         <Redirectlinks />
         {lg && <BurguerMenu />}
@@ -54,7 +56,7 @@ const MainWrapper = styled.div<MainWrapperProps>`
   ${({ $hasScrolled }) => $hasScrolled && 'box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);' }
 
   @media (max-width: ${breakingPoints.xxl}) {
-    padding: var(--gap-2) var(--gap-5);
+    padding: var(--gap-1) var(--gap-5);
   }
 
   @media (max-width: ${breakingPoints.lg}) {
