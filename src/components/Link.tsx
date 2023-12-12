@@ -1,7 +1,8 @@
 import styled from "styled-components"
+import { DestinationId } from "../utils/links"
 
 type LinkProps = {
-  destinationId: string
+  destinationId: DestinationId
   text: string
   className?: string
 }
@@ -10,8 +11,18 @@ export function Link({ destinationId, text, className }: LinkProps) {
 
   const handleClick = () => {
     const destination = document.getElementById(destinationId) as HTMLElement
+    let offSetTop: number
+
+    if (destinationId === 'home') {
+      offSetTop = 0
+    } else if (destinationId === 'contact') {
+      offSetTop = destination?.offsetTop - 80
+    } else {
+      offSetTop = destination?.offsetTop - 80
+    }
+
     window.scrollTo({
-      top: destination?.offsetTop - 80,
+      top: offSetTop,
       behavior: "smooth"
     })
   }

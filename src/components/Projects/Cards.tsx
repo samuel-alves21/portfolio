@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 import { ProjectCard } from "./ProjectCard"
-import { breakingPoints } from "../../breakingPoints"
+import { breakingPoints } from "../../utils/breakingPoints"
 
 export function Cards() {
   return (

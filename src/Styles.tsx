@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components' 
 
-import { breakingPoints } from './breakingPoints'
+import { breakingPoints } from './utils/breakingPoints'
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -128,7 +128,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     a {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
   }
 `

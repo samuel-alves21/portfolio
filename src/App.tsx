@@ -1,12 +1,14 @@
 import styled from "styled-components"
 
-import { breakingPoints } from "./breakingPoints"
+import { breakingPoints } from "./utils/breakingPoints"
 import { Home } from "./components/Home"
 import { Nav } from "./components/Nav"
 import { TechStack } from "./components/TechStack"
 import { Projects } from "./components/Projects"
 import { BuguerMenuModal } from "./components/Nav/BuguerMenuModal"
 import { About } from "./components/About"
+import { Contact } from "./components/Contact"
+import { Footer } from "./components/Footer"
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <About />
       <TechStack />
       <Projects />
+      <Contact />
+      <Footer />
     </MainWrapper>
   )
 }

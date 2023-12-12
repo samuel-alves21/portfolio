@@ -3,9 +3,10 @@ import { useMediaQuery } from "react-responsive"
 
 import { Navigationlinks } from "./NavigationLinks"
 import { Redirectlinks } from "./Redirectlinks"
-import { breakingPoints } from "../../breakingPoints"
+import { breakingPoints } from "../../utils/breakingPoints"
 import { BurguerMenu } from "./BurguerMenu"
 import { useState } from "react"
+import { Logo } from "../Logo"
 
 type MainWrapperProps = {
   $hasScrolled: boolean;
@@ -26,7 +27,7 @@ export function Nav() {
 
   return (
     <MainWrapper $hasScrolled={hasScrolled}>
-      <Name>SA</Name>
+      <Logo />
       <LinksWrapper>
         {lg || <Navigationlinks />}
         <Redirectlinks />
@@ -57,7 +58,7 @@ const MainWrapper = styled.div<MainWrapperProps>`
   }
 
   @media (max-width: ${breakingPoints.lg}) {
-    padding: var(--gap-2) var(--gap-2);
+    padding: var(--gap-1) var(--gap-2);
     gap: var(--gap-10);
   }
 
@@ -80,8 +81,4 @@ const LinksWrapper = styled.div`
   @media (max-width: ${breakingPoints.lg}) {
     gap: var(--gap-2);
   }
-`
-
-const Name = styled.h3`
-  color: var(--primary-color);
 `

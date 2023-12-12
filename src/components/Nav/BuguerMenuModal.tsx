@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react"
 
 import { Link } from "../Link"
 import { NavContext, NavContextType } from "../../context"
-import { links } from "../../links"
+import { links } from "../../utils/links"
 
 type WrapperProps = {
   $shouldDisplay: boolean
@@ -29,8 +29,8 @@ export function BuguerMenuModal() {
 
   return (
     <Wrapper $shouldDisplay={shouldDisplay} className='modal'>
-      {links.map((link, index) => (
-        <Link key={index} destinationId={link.href} text={link.text} />
+      {links.map((id, index) => (
+        <Link key={index} destinationId={id} text={id.replace(id[0], id[0].toUpperCase())} />
       ))}
       <div>
         <img src='img/closeIcon.svg' alt="close icon" id="close-icon"/>

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { useContext } from "react"
 
 import { NavContext, NavContextType } from "../../context"
-import { breakingPoints } from "../../breakingPoints"
+import { breakingPoints } from "../../utils/breakingPoints"
 
 const burguerMenu = 'img/burguerMenu.svg'
 

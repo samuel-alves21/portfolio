@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakingPoints } from '../../breakingPoints'
+import { breakingPoints } from '../../utils/breakingPoints'
 
 export function Redirectlinks() {
   return (

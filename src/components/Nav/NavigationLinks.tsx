@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
-import { breakingPoints } from "../../breakingPoints"
+import { breakingPoints } from "../../utils/breakingPoints"
 import { Link } from "../Link"
-import { links } from "../../links"
+import { links } from "../../utils/links"
 
 export function Navigationlinks() {
   return (
     <Wrapper>
-      {links.map((link, index) => (
-        <Link key={index} destinationId={link.href} text={link.text} />
+      {links.map((id, index) => (
+        <Link key={index} destinationId={id} text={id.replace(id[0], id[0].toUpperCase())} />
       ))}
     </Wrapper>
   )

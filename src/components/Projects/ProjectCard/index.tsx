@@ -5,7 +5,7 @@ import { Title, TitleProps } from "./Title"
 import { Description, DescriptionProps } from "./Description"
 import { Stack, TechStackProps } from "./Stack"
 import { ProjectsLinks, ProjectsLinksProps } from "./ProjectsLinks"
-import { breakingPoints } from "../../../breakingPoints"
+import { breakingPoints } from "../../../utils/breakingPoints"
 
 type ProjectCardProps = HeaderImageProps & TitleProps & DescriptionProps & TechStackProps & ProjectsLinksProps
 
