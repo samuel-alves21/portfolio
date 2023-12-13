@@ -2,7 +2,11 @@ import { createGlobalStyle } from 'styled-components'
 
 import { breakingPoints } from './utils/breakingPoints'
 
-export const GlobalStyles = createGlobalStyle`
+type GlobalStylesProps = {
+  darkTheme: boolean
+}
+
+export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
 
   :root {
     --primary-color: #A501E6;
@@ -55,31 +59,27 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 
-  a {
+  body {
+    background-color: ${({ darkTheme }) => darkTheme ? '#000' : '#fff'};
+  }
+
+  p, a, a:visited, span {
+    color: var( --tertiary-color);
+    font-size: 1rem;
     text-decoration: none;
-    color: var( --tertiary-color);
-  }
-
-  a:visited {
-    color: var( --tertiary-color);
-  }
-
-  p {
-    color: var( --tertiary-color);
-    font-size: 1.1rem;
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--secundary-color);
   }
 
   h3 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   h4 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--tertiary-color);
     font-weight: normal;
   }
@@ -92,7 +92,7 @@ export const GlobalStyles = createGlobalStyle`
 
   @media (max-width: ${breakingPoints.xxl}) {
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 

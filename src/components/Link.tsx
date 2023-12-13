@@ -33,7 +33,6 @@ export function Link({ destinationId, text, className }: LinkProps) {
 } 
 
 const StyledLink = styled.span`
-  font-size: 20px;
   position: relative;
   cursor: pointer;
 

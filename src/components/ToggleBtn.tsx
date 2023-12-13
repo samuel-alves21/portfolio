@@ -5,7 +5,7 @@ type ToggleProps = {
   toggle: boolean
 }
 
-const baseSize = 30
+const baseSize = 25
 
 export function ToggleBtn() {
   const [toggle, setToggle] = useState(false)

@@ -68,6 +68,10 @@ const Wrapper = styled.div`
   grid-template-columns:  repeat(3, 1fr);
   gap: var(--gap-5);
 
+  @media (max-width: ${breakingPoints.xxl}) {
+    width: 100%;
+  }
+
   @media (max-width: ${breakingPoints.xl}) {
     gap: var(--gap-1);
   }

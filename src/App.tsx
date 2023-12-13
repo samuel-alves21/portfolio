@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useContext } from "react"
 
 import { breakingPoints } from "./utils/breakingPoints"
 import { Home } from "./components/Home"
@@ -9,10 +10,15 @@ import { BuguerMenuModal } from "./components/Nav/BuguerMenuModal"
 import { About } from "./components/About"
 import { Contact } from "./components/Contact"
 import { Footer } from "./components/Footer"
+import { GlobalStyles } from "./Styles"
+import { SettingsContext, SettingsContextType } from "./contexts/SettingsContext"
 
 const App = () => {
+  const { settingsState: { darkTheme } } = useContext(SettingsContext) as SettingsContextType
+  
   return (
     <MainWrapper>
+      <GlobalStyles darkTheme={darkTheme}/>
       <BuguerMenuModal />
       <Nav />
       <Home />

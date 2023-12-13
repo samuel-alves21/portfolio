@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   gap: var(--gap-10);
 
   & img {
-      width: 100px;
+      width: 80px;
       margin: 0 auto;
     }
 

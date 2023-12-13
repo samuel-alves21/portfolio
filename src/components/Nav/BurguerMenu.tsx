@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { useContext } from "react"
 
-import { breakingPoints } from "../../utils/breakingPoints"
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 const burguerMenu = 'img/burguerMenu.svg'
@@ -18,7 +17,7 @@ export function BurguerMenu() {
 
 const Wrapper = styled.div`
   & img {
-    width: 40px;
+    width: 30px;
   }
 
   &:hover {
@@ -27,12 +26,6 @@ const Wrapper = styled.div`
     & img {
       transition: opacity  0.3s;
       opacity: 0.5;
-    }
-  }
-
-  @media (max-width: ${breakingPoints.sm}) {
-      & img {
-      width: 30px;
     }
   }
 `

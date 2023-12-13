@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { breakingPoints } from '../../utils/breakingPoints'
 
 export function Redirectlinks() {
   return (
@@ -25,12 +24,6 @@ const Wrapper = styled.div`
   }
 
   & img {
-    width: 35px;
-  }
-
-  @media (max-width: ${breakingPoints.sm}) {
-      & img {
-      width: 30px;
-    }
+    width: 30px;
   }
 `

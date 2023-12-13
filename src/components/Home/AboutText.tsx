@@ -10,13 +10,13 @@ export function AboutText() {
     <H1>
       Hi, {lg || <br />}
       My name is <br />
-      <Span>Samuel Alves</Span> <br />
+      <StyledH1>Samuel Alves</StyledH1>
       I built things for web
     </H1>
   )
 }
 
-const Span = styled.span`
+const StyledH1 = styled.h1`
   color: var(--primary-color);
 `
 
