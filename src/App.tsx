@@ -18,7 +18,7 @@ const App = () => {
   
   return (
     <MainWrapper>
-      <GlobalStyles darkTheme={darkTheme}/>
+      <GlobalStyles $darkTheme={darkTheme}/>
       <BuguerMenuModal />
       <Nav />
       <Home />

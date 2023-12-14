@@ -15,6 +15,7 @@ export function BuguerMenuModal() {
   const handleClick = (e: MouseEvent) => {
     const target = e.target as HTMLElement
     if (target.id === 'close-icon' || !target.classList.contains('modal')) {
+      if (!shouldDisplayNav) return
       settingsDispatch({ type: "CLOSE_NAV" })
     }
   }

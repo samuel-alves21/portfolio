@@ -10,7 +10,9 @@ export function AboutText() {
     <H1>
       Hi, {lg || <br />}
       My name is <br />
-      <StyledH1>Samuel Alves</StyledH1>
+      <div>
+        <StyledH1>Samuel Alves</StyledH1>
+      </div>
       I built things for web
     </H1>
   )

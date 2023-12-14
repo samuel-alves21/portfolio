@@ -6,12 +6,20 @@ import { Description, DescriptionProps } from "./Description"
 import { Stack, TechStackProps } from "./Stack"
 import { ProjectsLinks, ProjectsLinksProps } from "./ProjectsLinks"
 import { breakingPoints } from "../../../utils/breakingPoints"
+import { useContext } from "react"
+import { SettingsContext, SettingsContextType } from "../../../contexts/SettingsContext"
 
 type ProjectCardProps = HeaderImageProps & TitleProps & DescriptionProps & TechStackProps & ProjectsLinksProps
 
+type MainWrapperProps = {
+  $darkTheme: boolean;
+} 
+
 export function ProjectCard({ img, title, description, techStack, projectCodeLink, liveProjectLink }: ProjectCardProps) {
+  const { settingsState: { darkTheme } } = useContext(SettingsContext) as SettingsContextType
+
   return (
-    <MainWrapper>
+    <MainWrapper $darkTheme={darkTheme}>
       <HeaderImage img={img}/>
       <InfoWrapper>
         <ContentWrapper>
@@ -27,7 +35,7 @@ export function ProjectCard({ img, title, description, techStack, projectCodeLin
   )
 }
 
-const MainWrapper = styled.div`
+const MainWrapper = styled.div<MainWrapperProps>`
   width: min(350px, 100%);
   height: 100%;
   background-color: #fff;
@@ -37,6 +45,7 @@ const MainWrapper = styled.div`
   border-radius: 15px;
   object-fit: cover;
   margin: 0 auto;
+  background-color: ${({ $darkTheme }) => $darkTheme ? '#363636' : 'transparent'};
 
   & img {
     border-radius: 15px 15px 0 0;

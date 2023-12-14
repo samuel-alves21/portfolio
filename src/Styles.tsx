@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 import { breakingPoints } from './utils/breakingPoints'
 
 type GlobalStylesProps = {
-  darkTheme: boolean
+  $darkTheme: boolean
 }
 
 export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
@@ -11,11 +11,13 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   :root {
     --primary-color: #A501E6;
     --secundary-color: #003BE6;
-    --tertiary-color: #666;
+    --tertiary-color: ${({ $darkTheme }) => $darkTheme ? '#fff' : '#666 '};
     --tertiary-color-lighter: #b3b3b3;
     --quaternary-color: #42446E;
 
-    --nav-color: #f0f0f0;
+    --nav-color:  ${({ $darkTheme }) => $darkTheme ? '#141414' : '#f0f0f0 '};
+
+    --dark-theme-color: #0f0f0f;
 
     --gap-1 : 10px;
     --gap-2 : 20px;
@@ -60,7 +62,8 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   }
 
   body {
-    background-color: ${({ darkTheme }) => darkTheme ? '#000' : '#fff'};
+    background-color: ${({ $darkTheme }) => $darkTheme ? 'var(--dark-theme-color)' : '#fff'};
+    transition: background-color 0.3s ease-in-out;
   }
 
   p, a, a:visited, span {
