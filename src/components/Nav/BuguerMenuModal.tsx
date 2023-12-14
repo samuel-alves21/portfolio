@@ -7,10 +7,11 @@ import { SettingsContext, SettingsContextType } from "../../contexts/SettingsCon
 
 type WrapperProps = {
   $shouldDisplay: boolean
+  $darkTheme: boolean
 }
 
 export function BuguerMenuModal() {
-  const { settingsState: { shouldDisplayNav }, settingsDispatch } = useContext(SettingsContext) as SettingsContextType
+  const { settingsState: { shouldDisplayNav, darkTheme }, settingsDispatch } = useContext(SettingsContext) as SettingsContextType
 
   const handleClick = (e: MouseEvent) => {
     const target = e.target as HTMLElement
@@ -29,7 +30,7 @@ export function BuguerMenuModal() {
   })
 
   return (
-    <Wrapper $shouldDisplay={shouldDisplayNav} className='modal'>
+    <Wrapper $shouldDisplay={shouldDisplayNav} $darkTheme={darkTheme} className='modal'>
       {links.map((id, index) => (
         <Link key={index} destinationId={id} text={id.replace(id[0], id[0].toUpperCase())} />
       ))}
@@ -42,7 +43,6 @@ export function BuguerMenuModal() {
 
 const Wrapper = styled.aside<WrapperProps>`
   position: fixed;
-  background-color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +50,8 @@ const Wrapper = styled.aside<WrapperProps>`
   padding: var(--gap-2);
   top: 0px;
   transition: right 0.3s ease-in-out;
-  ${({ $shouldDisplay }) => $shouldDisplay ? 'right: 0px;' : 'right: -200px;'};
+  right: ${({ $shouldDisplay }) => $shouldDisplay ? '0px;' : '-200px;'};
+  background-color: ${({ $darkTheme }) => $darkTheme ? 'var(--dark-theme-color-light)' : 'var(--tertiary-color)'};
   z-index: 10;
 
   & span, span:visited {

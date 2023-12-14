@@ -12,12 +12,13 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     --primary-color: #A501E6;
     --secundary-color: #003BE6;
     --tertiary-color: ${({ $darkTheme }) => $darkTheme ? '#fff' : '#666 '};
-    --tertiary-color-lighter: #b3b3b3;
+    --tertiary-color-light: #b3b3b3;
     --quaternary-color: #42446E;
 
-    --nav-color:  ${({ $darkTheme }) => $darkTheme ? '#141414' : '#f0f0f0 '};
+    --nav-color:  ${({ $darkTheme }) => $darkTheme ? 'var(--dark-theme-color-light)' : '#efefef'};
 
-    --dark-theme-color: #0f0f0f;
+    --dark-theme-color: #0d0d0d;
+    --dark-theme-color-light: #232323;
 
     --gap-1 : 10px;
     --gap-2 : 20px;
@@ -37,7 +38,7 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     scroll-behavior: smooth;
     
     ::selection {
-      background-color: var(--tertiary-color-lighter);
+      background-color: var(--tertiary-color-light);
       color: #fff;
     }
   }

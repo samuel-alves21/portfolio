@@ -1,7 +1,13 @@
 import styled from "styled-components"
+import { useContext } from "react"
+
 import { breakingPoints } from "../../utils/breakingPoints"
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 export function Icons() {
+  const { settingsState: { darkTheme } } = useContext(SettingsContext) as SettingsContextType 
+  const expressIcon = darkTheme ? 'img/express-js-white-icon.png' : 'img/express.svg'
+
   return (
     <Wrapper className="section-margin">
       <img src='img/js.svg' alt="javascript icon" title='JavaScript'/>
@@ -11,7 +17,7 @@ export function Icons() {
       <img src='img/styledComponents.svg' alt="styledComponents icon" title='Styled Components'/> 
       <img src='img/redux.svg' alt="redux icon" title='Redux'/>
       <img src='img/node.svg' alt="node icon" title='Node'/>
-      <img src='img/express.svg' alt="express icon" title='Express'/> 
+      <img src={expressIcon} alt="express icon" title='Express'/> 
       <img src='img/jest.svg' alt="jest icon" title='Jest'/> 
       <img src='img/git.svg' alt="git icon" title='Git'/>
       <img src='img/github.svg' alt="github icon" title='Github'/>

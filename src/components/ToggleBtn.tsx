@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import styled from "styled-components"
+
 import { SettingsContext, SettingsContextType } from "../contexts/SettingsContext"
 
 type ToggleProps = {

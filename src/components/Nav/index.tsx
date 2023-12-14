@@ -52,7 +52,7 @@ const MainWrapper = styled.div<MainWrapperProps>`
   justify-content: space-between;
   align-items: center;
   z-index: 3;
-  ${({ $hasScrolled }) => $hasScrolled ? 'background-color: var(--nav-color);' : 'background-color: transparent;' }
+  background-color: ${({ $hasScrolled }) => $hasScrolled ? 'var(--nav-color)' : 'transparent' };
   ${({ $hasScrolled }) => $hasScrolled && 'box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);' }
 
   @media (max-width: ${breakingPoints.xxl}) {

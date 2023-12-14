@@ -45,7 +45,7 @@ const MainWrapper = styled.div<MainWrapperProps>`
   border-radius: 15px;
   object-fit: cover;
   margin: 0 auto;
-  background-color: ${({ $darkTheme }) => $darkTheme ? '#363636' : 'transparent'};
+  background-color: ${({ $darkTheme }) => $darkTheme ? 'var(--dark-theme-color-light)' : 'transparent'};
 
   & img {
     border-radius: 15px 15px 0 0;
