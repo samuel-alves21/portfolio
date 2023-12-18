@@ -7,8 +7,9 @@ import { breakingPoints } from "../../utils/breakingPoints"
 import { BurguerMenu } from "./BurguerMenu"
 import { useContext, useState } from "react"
 import { Logo } from "../Logo"
-import { ToggleBtn } from "../ToggleBtn"
+import { ToggleBtn } from "./ToggleBtn"
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
+import { LanguageSelector } from "./LanguageSelector"
 
 type MainWrapperProps = {
   $hasScrolled: boolean;
@@ -35,6 +36,7 @@ export function Nav() {
     <MainWrapper $hasScrolled={hasScrolled}>
       <Logo />
       <LinksWrapper>
+      <LanguageSelector />
       <ToggleWrapper>
         <img src={moonImg} alt="sun icon" />
         <ToggleBtn />

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import styled from "styled-components"
 
-import { SettingsContext, SettingsContextType } from "../contexts/SettingsContext"
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 type ToggleProps = {
   $toggle: boolean
@@ -10,7 +10,6 @@ type ToggleProps = {
 const baseSize = 25
 
 export function ToggleBtn() {
-  console.log('here')
   const [toggle, setToggle] = useState(false)
   const { settingsDispatch } = useContext(SettingsContext) as SettingsContextType
 
