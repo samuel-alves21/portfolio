@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { useMediaQuery } from 'react-responsive'
+
 import { breakingPoints } from "../../utils/breakingPoints"
 
 type WrapperProps = {

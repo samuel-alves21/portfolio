@@ -1,8 +1,7 @@
 import styled from "styled-components"
-import { DestinationId } from "../utils/links"
 
 type LinkProps = {
-  destinationId: DestinationId
+  destinationId: string
   text: string
   className?: string
 }
@@ -15,9 +14,7 @@ export function Link({ destinationId, text, className }: LinkProps) {
 
     if (destinationId === 'home') {
       offSetTop = 0
-    } else if (destinationId === 'contact') {
-      offSetTop = destination?.offsetTop - 80
-    } else {
+    }  else {
       offSetTop = destination?.offsetTop - 80
     }
 

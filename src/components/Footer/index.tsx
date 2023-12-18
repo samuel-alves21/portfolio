@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { Logo } from "../Logo";
+import { useMediaQuery } from "react-responsive";
+
+import { breakingPoints } from "../../utils/breakingPoints";
+
 import { InfoAndContact } from "./InfoAndContact";
 import { Line } from "../Line";
-import { useMediaQuery } from "react-responsive";
-import { breakingPoints } from "../../utils/breakingPoints";
+import { Logo } from "../Logo";
 
 export function Footer() {
   const xl = useMediaQuery({ query: `(min-width: ${breakingPoints.xl})` })

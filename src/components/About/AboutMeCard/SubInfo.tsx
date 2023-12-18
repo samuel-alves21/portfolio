@@ -1,22 +1,44 @@
 import styled from "styled-components"
-import { breakingPoints } from "../../../utils/breakingPoints"
+import { useContext } from "react"
 
-export function SubInfo() {
+import { breakingPoints } from "../../../utils/breakingPoints"
+import { languages } from "../../../utils/languages"
+
+import { SettingsContext, SettingsContextType } from "../../../contexts/SettingsContext"
+
+export type SubInfoProps = {
+  location?: string
+  company?: string
+  initialMounth?: string 
+  initialYear?: number
+  finalMounth?: string 
+  finalYear?: number
+}
+
+export function SubInfo({ company, location, initialMounth, initialYear, finalMounth, finalYear } :SubInfoProps) {
+
+  const { settingsState: { language } } = useContext(SettingsContext) as SettingsContextType
+
+  const { cardCurrent } = languages[language].about
+
   return (
     <Wrapper>
       <Location>
         <div>
           <img src="img/office-building-icon.svg" alt="small building icon" />
-          <p>freelancer</p>
+          <p>{company}</p>
         </div>
-        <div>
-          <img src="img/location-icon.svg" alt="small location icon" />
-          <p>internet</p>
-        </div>
+        {
+          location && 
+          <div>
+            <img src="img/location-icon.svg" alt="small location icon" />
+            <p>{location}</p>
+          </div>
+        }
       </Location>
       <Date>
         <img src="img/calendar-icon.svg" alt="small calendar icon" />
-        <p>Apr 2022 - Current</p>
+        <p>{initialMounth} {initialYear} - {finalMounth && finalYear ? `${finalMounth} ${finalYear}` : `${cardCurrent}`}</p>
       </Date>
     </Wrapper>
   )

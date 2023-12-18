@@ -1,12 +1,18 @@
 import styled from "styled-components"
+
 import { breakingPoints } from "../../../utils/breakingPoints"
 
-export function MainInfo() {
+export type MainInfoProps = {
+  title: string
+  description: string
+}
+
+export function MainInfo({ description, title } :MainInfoProps) {
   return (
     <Wrapper>
-      <h4>Freelancer Developer</h4>
+      <h4>{title}</h4>
       <div>
-        <span>freelancer</span>
+        <span>{description}</span>
       </div>
     </Wrapper>
   )

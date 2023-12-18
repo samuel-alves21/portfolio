@@ -11,7 +11,7 @@ type WrapperProps = {
 }
 
 export function BuguerMenuModal() {
-  const { settingsState: { shouldDisplayNav, darkTheme }, settingsDispatch } = useContext(SettingsContext) as SettingsContextType
+  const { settingsState: { shouldDisplayNav, darkTheme, language }, settingsDispatch } = useContext(SettingsContext) as SettingsContextType
 
   const handleClick = (e: MouseEvent) => {
     const target = e.target as HTMLElement
@@ -31,8 +31,8 @@ export function BuguerMenuModal() {
 
   return (
     <Wrapper $shouldDisplay={shouldDisplayNav} $darkTheme={darkTheme} className='modal'>
-      {links.map((id, index) => (
-        <Link key={index} destinationId={id} text={id.replace(id[0], id[0].toUpperCase())} />
+      {links[language].map((linkObj, index) => (
+        <Link key={index} destinationId={linkObj.id} text={linkObj.name} />
       ))}
       <div>
         <img src='img/closeIcon.svg' alt="close icon" id="close-icon"/>

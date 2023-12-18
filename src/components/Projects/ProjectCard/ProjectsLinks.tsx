@@ -1,6 +1,10 @@
 import styled from "styled-components"
+import { useContext } from "react"
 
 import { breakingPoints } from "../../../utils/breakingPoints"
+
+import { SettingsContext, SettingsContextType } from "../../../contexts/SettingsContext"
+import { languages } from "../../../utils/languages"
 
 export type ProjectsLinksProps = {
   liveProjectLink: string
@@ -8,15 +12,20 @@ export type ProjectsLinksProps = {
 }
 
 export function ProjectsLinks({ liveProjectLink, projectCodeLink } :ProjectsLinksProps) {
+
+  const { settingsState: { language } } = useContext(SettingsContext) as SettingsContextType
+
+  const { cardCodeLink, cardLiveLink }= languages[language].projects
+
   return (
     <Wrapper>
       <LinkWrapper>
         <Img src="img/link-chain.svg" alt="link chain icon"/>
-        <a href={liveProjectLink} target="_blank">Live Preview</a>
+        <a href={liveProjectLink} target="_blank">{cardLiveLink}</a>
       </LinkWrapper>
       <LinkWrapper>
         <Img src="img/project-github.svg" alt="github icon"/>
-          <a href={projectCodeLink} target="_blank">View Code</a>
+          <a href={projectCodeLink} target="_blank">{cardCodeLink}</a>
       </LinkWrapper>
     </Wrapper>
   )
@@ -42,7 +51,7 @@ const LinkWrapper = styled.div`
   gap: var(--gap-2);
 
   @media (max-width: ${breakingPoints.xl}) {
-    gap: var(--gap-1);
+    gap: 5px;
   }
 
   & a {

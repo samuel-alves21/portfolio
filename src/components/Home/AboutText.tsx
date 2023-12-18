@@ -1,19 +1,27 @@
 import styled from "styled-components"
 import { useMediaQuery } from "react-responsive"
+import { useContext } from "react"
 
 import { breakingPoints } from "../../utils/breakingPoints"
+import { languages } from "../../utils/languages"
+
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 export function AboutText() {
   const lg = useMediaQuery({ query: `(max-width: ${breakingPoints.lg})` })
 
+  const { settingsState: { language } } = useContext(SettingsContext) as SettingsContextType
+
+  const { text01, text02, text03 }= languages[language].home
+
   return (
     <H1>
-      Hi, {lg || <br />}
-      My name is <br />
+      {text01}, {lg || <br />}
+      {text02} <br />
       <div>
-        <StyledH1>Samuel Alves</StyledH1>
+        <StyledH1>Samuel Alves,</StyledH1>
       </div>
-      I built things for web
+      {text03}
     </H1>
   )
 }

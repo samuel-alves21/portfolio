@@ -1,12 +1,22 @@
 import styled from "styled-components"
+import { useContext } from "react"
+
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
+
+import { languages } from "../../utils/languages"
 
 import { Icons } from "./Icons"
 
 export function TechStack() {
+
+  const { settingsState: { language } } = useContext(SettingsContext) as SettingsContextType
+
+  const { title, description }= languages[language].teckStack
+
   return (
     <Wrapper id='tech-stack'>
-      <h1>My Tech Stack</h1>
-      <h4 className="subtitle-margin">Technologies I’ve been working with recently</h4>
+      <h1>{title}</h1>
+      <h4 className="subtitle-margin">{description}</h4>
       <Icons />
     </Wrapper>
   )

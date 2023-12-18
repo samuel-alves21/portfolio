@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import styled from "styled-components"
+
 import { SettingsContext, SettingsContextType } from "../../../contexts/SettingsContext"
 
 export type TitleProps = {

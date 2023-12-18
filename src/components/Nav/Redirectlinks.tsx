@@ -22,8 +22,4 @@ const Wrapper = styled.div`
     opacity: 0.5;
     transition: opacity 0.2s;
   }
-
-  & img {
-    width: 30px;
-  }
 `

@@ -3,12 +3,17 @@ import styled from "styled-components"
 import { breakingPoints } from "../../utils/breakingPoints"
 import { Link } from "../Link"
 import { links } from "../../utils/links"
+import { useContext } from "react"
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 export function Navigationlinks() {
+
+  const { settingsState: { language } } = useContext(SettingsContext) as SettingsContextType
+
   return (
     <Wrapper>
-      {links.map((id, index) => (
-        <Link key={index} destinationId={id} text={id.replace(id[0], id[0].toUpperCase())} />
+      {links[language].map((linkObj, index) => (
+        <Link key={index} destinationId={linkObj.id} text={linkObj.name} />
       ))}
     </Wrapper>
   )

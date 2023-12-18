@@ -83,7 +83,7 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   }
 
   h4 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--tertiary-color);
     font-weight: normal;
   }

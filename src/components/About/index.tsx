@@ -1,8 +1,11 @@
 import styled from "styled-components"
+
+import { breakingPoints } from "../../utils/breakingPoints"
+
 import { AboutMe } from "./AboutMe"
 import { WorkExperience } from "./WorkExperience"
 import { Education } from "./Education"
-import { breakingPoints } from "../../utils/breakingPoints"
+import { Language } from "./Language"
 
 
 export function About() {
@@ -11,6 +14,7 @@ export function About() {
       <AboutMe />
       <WorkExperience />
       <Education />
+      <Language />
     </Wrapper>
   )
 }

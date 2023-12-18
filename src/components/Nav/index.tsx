@@ -5,9 +5,10 @@ import { Navigationlinks } from "./NavigationLinks"
 import { Redirectlinks } from "./Redirectlinks"
 import { breakingPoints } from "../../utils/breakingPoints"
 import { BurguerMenu } from "./BurguerMenu"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Logo } from "../Logo"
 import { ToggleBtn } from "../ToggleBtn"
+import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 type MainWrapperProps = {
   $hasScrolled: boolean;
@@ -15,6 +16,8 @@ type MainWrapperProps = {
 
 export function Nav() {
   const [hasScrolled, setHasScrolled] = useState(false)
+
+  const { settingsState: { darkTheme } } = useContext(SettingsContext) as SettingsContextType
 
   window.onscroll = () => {
     if (window.scrollY > 50) {
@@ -26,11 +29,16 @@ export function Nav() {
 
   const lg = useMediaQuery({ query: `(max-width: ${breakingPoints.lg})` })
 
+  const moonImg = darkTheme ? 'img/moon-on.png' : 'img/moon-off.png'
+
   return (
     <MainWrapper $hasScrolled={hasScrolled}>
       <Logo />
       <LinksWrapper>
-      <ToggleBtn />
+      <ToggleWrapper>
+        <img src={moonImg} alt="sun icon" />
+        <ToggleBtn />
+      </ToggleWrapper>
         {lg || <Navigationlinks />}
         <Redirectlinks />
         {lg && <BurguerMenu />}
@@ -39,7 +47,7 @@ export function Nav() {
   )
 }
 
-const MainWrapper = styled.div<MainWrapperProps>`
+const MainWrapper = styled.nav<MainWrapperProps>`
   transition: background-color 0.3s ease-in-out;
   max-width: 2000px;
   position: fixed;
@@ -54,6 +62,10 @@ const MainWrapper = styled.div<MainWrapperProps>`
   z-index: 3;
   background-color: ${({ $hasScrolled }) => $hasScrolled ? 'var(--nav-color)' : 'transparent' };
   ${({ $hasScrolled }) => $hasScrolled && 'box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);' }
+
+  & img {
+    width: 30px;
+  }
 
   @media (max-width: ${breakingPoints.xxl}) {
     padding: var(--gap-1) var(--gap-5);
@@ -82,5 +94,15 @@ const LinksWrapper = styled.div`
 
   @media (max-width: ${breakingPoints.lg}) {
     gap: var(--gap-2);
+  }
+`
+
+const ToggleWrapper = styled.div`
+  display: flex;
+  gap: var(--gap-2);
+  align-items: center;
+
+  & > img {
+    transform: rotate(6deg)
   }
 `

@@ -1,13 +1,15 @@
 import styled from "styled-components"
+import { useContext } from "react"
+
+import { breakingPoints } from "../../../utils/breakingPoints"
+
+import { SettingsContext, SettingsContextType } from "../../../contexts/SettingsContext"
 
 import { HeaderImage, HeaderImageProps } from "./HeaderImage"
 import { Title, TitleProps } from "./Title"
 import { Description, DescriptionProps } from "./Description"
 import { Stack, TechStackProps } from "./Stack"
 import { ProjectsLinks, ProjectsLinksProps } from "./ProjectsLinks"
-import { breakingPoints } from "../../../utils/breakingPoints"
-import { useContext } from "react"
-import { SettingsContext, SettingsContextType } from "../../../contexts/SettingsContext"
 
 type ProjectCardProps = HeaderImageProps & TitleProps & DescriptionProps & TechStackProps & ProjectsLinksProps
 
