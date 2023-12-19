@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     --quaternary-color: #42446E;
 
     --nav-color:  ${({ $darkTheme }) => $darkTheme ? 'var(--dark-theme-color-light)' : '#efefef'};
+    --mobile-nav-color: ${({ $darkTheme }) => $darkTheme ? 'var(--dark-theme-color-light)' : 'var(--tertiary-color)'};
 
     --dark-theme-color: #0d0d0d;
     --dark-theme-color-light: #232323;

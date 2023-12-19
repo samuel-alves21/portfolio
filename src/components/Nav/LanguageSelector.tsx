@@ -11,6 +11,7 @@ import { breakingPoints } from "../../utils/breakingPoints"
 
 type OptionsWrapperProps = {
   $darkTheme: boolean
+  $lg?: boolean
 }
 
 type LanguageSelectorProps = {
@@ -22,7 +23,7 @@ export function LanguageSelector() {
   const [selectedCountry, setSelectedCountry] = useState('')
   const [display, setDisplay] = useState(false)
 
-  const { settingsState: { language, darkTheme }, settingsDispatch } = useContext(SettingsContext) as SettingsContextType
+  const { settingsState: { language, darkTheme, shouldDisplayNav }, settingsDispatch } = useContext(SettingsContext) as SettingsContextType
 
   const lg = useMediaQuery({ query: `(max-width: ${breakingPoints.lg})` })
 
@@ -34,22 +35,27 @@ export function LanguageSelector() {
     })
   }, [language])
 
+  useEffect(() => {
+    if (!shouldDisplayNav) {
+      setDisplay(false)
+    }
+  }, [shouldDisplayNav])
+
   const setLanguage = (language: Language) => {
     settingsDispatch({ type: 'CHANGE_LANGUAGE', payload: language })
   }
 
   const openLanguageOptions = () => {
     if (!lg) return
-    console.log(display)
     setDisplay(!display)
   }
   
   return (
-    <Wrapper className="modal" onClick={openLanguageOptions} $lg={lg}>
-      <img src={selectedCountry} alt="usa flag" className="modal"/>
+    <Wrapper className="modal" $lg={lg}>
+      <img src={selectedCountry} alt="usa flag" className="modal" onClick={openLanguageOptions}/>
       <DropDown className="modal" $display={display} $lg={lg}>
         {countryFlags.map((country, index) => (
-          <OptionsWrapper $darkTheme={darkTheme} className="modal" key={index}>
+          <OptionsWrapper $darkTheme={darkTheme} $lg={lg} className="modal" key={index}>
             <div onClick={() => setLanguage(country.language)} className="modal">
               { country.language === language && <DoneImg src='img/done.svg' alt="done icon" className="modal"/>} 
               <img src={country.flag} alt="" className="modal"/>
@@ -76,16 +82,9 @@ const Wrapper= styled.div<LanguageSelectorProps>`
     width: 30px;
   }
 
-  ${({ $lg }) => {
-      if (!$lg) {
-        return `
-          &:hover {
-            & > img { & > div {
-              display: block;
-            }
-          }
-        `
-      }
+  &:hover {
+    & > div {
+      ${({ $lg }) => !$lg && 'display: block'}; 
     }
   }
 `
@@ -93,11 +92,11 @@ const Wrapper= styled.div<LanguageSelectorProps>`
 const DropDown = styled.div<LanguageSelectorProps>`
   display: ${({ $display, $lg }) => $lg ? $display ? 'block' : 'none' : 'none'};
   position: absolute;
-  left: 0;
-  top: 30px;
-  width: 200px;
+  top: ${({ $lg }) => $lg ? '-10px' : '30px'};
+  right: ${({ $lg }) => $lg ? '50px' : '0'};
+  width:  ${({ $lg }) => $lg ? '180px' : '200px'};
   padding: var(--gap-2) 0 0 0 ;
-  background-color: var(--nav-color);
+  background-color: ${({ $lg }) => $lg ? 'var(--mobile-nav-color)' : 'var(--nav-color)'};
   transition: background-color 0.3s ease-in-out;
 `
 
@@ -109,7 +108,7 @@ const OptionsWrapper = styled.div<OptionsWrapperProps>`
   padding: 5px var(--gap-3);
 
   &:hover {
-    background-color: ${({ $darkTheme }) => $darkTheme ? '#2c2c2c' : '#d3d3d3'};
+    background-color: ${({ $darkTheme, $lg }) => $darkTheme ? '#2c2c2c' : $lg ? '#929292' : '#d3d3d3'};
   }
 
   & div {

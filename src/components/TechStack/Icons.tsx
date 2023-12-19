@@ -11,7 +11,7 @@ export function Icons() {
 
   return (
     <Wrapper className="section-margin">
-      <img src='img/js.svg' alt="javascript icon" title='JavaScript'/>
+      <img src='img/typescript-icon.svg' alt="typeScript icon" title='TypeScript'/>
       <img src='img/html.svg' alt="html icon" title='Html'/> 
       <img src='img/css.svg' alt="css icon" title='Css'/>
       <img src='img/react.svg' alt="react icon" title='React'/>
@@ -21,8 +21,8 @@ export function Icons() {
       <img src={expressIcon} alt="express icon" title='Express'/> 
       <img src='img/jest.svg' alt="jest icon" title='Jest'/> 
       <img src='img/firebase-icon.svg' alt="firebase icon" title='Firebase'/>
+      <img src='img/mongoDb-icon.svg' alt="mongoDB icon" title='mongoDB'/>
       <img src='img/postgre-icon.svg' alt="postgreSQL icon" title='postgreSQL'/>
-      <img src='img/vscode.svg' alt="vscode icon" title='Vscode'/>
     </Wrapper>
   )
 } 

@@ -64,7 +64,7 @@ const Wrapper = styled.aside<WrapperProps>`
   padding: var(--gap-2);
   top: 0px;
   transition: right 0.3s ease-in-out;
-  right: ${({ $shouldDisplay }) => $shouldDisplay ? '0px;' : '-200px;'};
+  right: ${({ $shouldDisplay }) => $shouldDisplay ? '0px;' : '-250px;'};
   background-color: ${({ $darkTheme }) => $darkTheme ? 'var(--dark-theme-color-light)' : 'var(--tertiary-color)'};
   z-index: 10;
 

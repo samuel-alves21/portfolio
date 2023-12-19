@@ -59,7 +59,7 @@ export const languages = {
       card01: {
         title: 'StudyPom',
         description: 'StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions.',
-        tech: 'React, Typescript, Styled Components, Tailwind CSS',
+        tech: 'Typescript, React, Styled Components, Firebase',
       },
       card02: {
         title: 'StudyPom',
@@ -155,7 +155,7 @@ export const languages = {
       card01: {
         title: 'StudyPom',
         description: 'O StudyPom é um aplicativo de timer baseado na técnica pomodoro, construído com TypeScript e React, que ajuda você a manter o foco e a produtividade durante suas sessões de estudo.',
-        tech: 'React, TypeScript, Styled Components, Tailwind CSS',
+        tech: 'Typescript, React, Styled Components, Firebase',
       },
       card02: {
         title: 'StudyPom',
