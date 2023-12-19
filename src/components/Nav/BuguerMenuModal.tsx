@@ -1,9 +1,15 @@
 import styled from "styled-components"
 import { useEffect, useContext } from "react"
+import { useMediaQuery } from "react-responsive"
 
-import { Link } from "../Link"
 import { links } from "../../utils/links"
+import { breakingPoints } from "../../utils/breakingPoints"
+
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
+
+import { LanguageSelector } from "./LanguageSelector"
+import { ToggleBtn } from "./ToggleBtn"
+import { Link } from "../Link"
 
 type WrapperProps = {
   $shouldDisplay: boolean
@@ -21,6 +27,8 @@ export function BuguerMenuModal() {
     }
   }
 
+  const lg = useMediaQuery({ query: `(max-width: ${breakingPoints.lg})` })
+
   useEffect(() => {
     document.addEventListener('click', handleClick)
 
@@ -29,14 +37,20 @@ export function BuguerMenuModal() {
     }
   })
 
+  useEffect(() => {
+    if (!lg) {
+      settingsDispatch({ type: "CLOSE_NAV" })
+    }
+  }, [lg, settingsDispatch])
+
   return (
     <Wrapper $shouldDisplay={shouldDisplayNav} $darkTheme={darkTheme} className='modal'>
       {links[language].map((linkObj, index) => (
         <Link key={index} destinationId={linkObj.id} text={linkObj.name} />
       ))}
-      <div>
-        <img src='img/closeIcon.svg' alt="close icon" id="close-icon"/>
-      </div>
+      <ToggleBtn />
+      <LanguageSelector />
+      <img src='img/closeIcon.svg' alt="close icon" id="close-icon"/>
     </Wrapper>
   )
 }
@@ -62,7 +76,7 @@ const Wrapper = styled.aside<WrapperProps>`
     background-color: #fff;
   }
 
-  & img {
+  & > img {
     width: 20px;
   }
 

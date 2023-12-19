@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import styled from "styled-components"
 
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
@@ -13,7 +14,11 @@ export function AboutMe() {
   return (
     <>
       <h1>{title}</h1>
-      <p>{description}</p>
+      <p>{description.initialDescription}<Strong>{description.descriptionHighlight01}</Strong>{description.middleText}<Strong>{description.descriptionHighlight02}</Strong>{description.finalDescription}</p>
     </>
   )
 }
+
+const Strong = styled.strong`
+  color: var(--primary-color)
+`

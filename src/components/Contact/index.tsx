@@ -18,8 +18,8 @@ export function Contact() {
   return (
     <Wrapper id='contact'> 
     { 
-      sm ? <><h5>{title}</h5> <h5 className='email'>samueltheodoro@gmail.com</h5></> :
-      lg ? <><h2>{title}</h2> <h2 className='email'>samueltheodoro@gmail.com</h2></> :
+      sm ? <><h5>{title}</h5> <h5 className='email'><Strong>samueltheodoro@gmail.com</Strong></h5></> :
+      lg ? <><h2>{title}</h2> <h2 className='email'><Strong>samueltheodoro@gmail.com</Strong></h2></> :
       <><h1>{title}</h1> <h1 className='email'>samueltheodoro@gmail.com</h1></> 
     }
     </Wrapper>
@@ -42,3 +42,7 @@ const Wrapper = styled.div`
     color: var(--primary-color);
   }
 `    
+
+const Strong = styled.strong`
+  color: var(--primary-color)
+`

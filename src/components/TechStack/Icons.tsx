@@ -20,8 +20,8 @@ export function Icons() {
       <img src='img/node.svg' alt="node icon" title='Node'/>
       <img src={expressIcon} alt="express icon" title='Express'/> 
       <img src='img/jest.svg' alt="jest icon" title='Jest'/> 
-      <img src='img/git.svg' alt="git icon" title='Git'/>
-      <img src='img/github.svg' alt="github icon" title='Github'/>
+      <img src='img/firebase-icon.svg' alt="firebase icon" title='Firebase'/>
+      <img src='img/postgre-icon.svg' alt="postgreSQL icon" title='postgreSQL'/>
       <img src='img/vscode.svg' alt="vscode icon" title='Vscode'/>
     </Wrapper>
   )

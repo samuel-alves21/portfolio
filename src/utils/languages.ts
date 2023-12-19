@@ -7,7 +7,13 @@ export const languages = {
     },
     about: {
       title: 'About Me',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem nam ducimus alias necessitatibus adipisci, dolorum recusandae, quam tempora obcaecati et tempore vel debitis suscipit veritatis saepe perferendis expedita at?',
+      description: {
+        initialDescription: "I'm Samuel, a dedicated web developer with experience in React and Node.js. ",
+        descriptionHighlight01: 'React ',
+        middleText: 'and ',
+        descriptionHighlight02: 'NodeJs. ',
+        finalDescription: "Through freelance projects, I've honed my skills in crafting seamless web applications that blend intuitive design with robust functionality. Let's collaborate and bring your ideas to life.",
+      },
       cardCurrent: 'current',
       work: {
         title: 'Work Experience',
@@ -93,11 +99,17 @@ export const languages = {
     home: {
       text01: 'Olá',
       text02: 'Eu sou',
-      text03: 'Eu construo coisas para a web'
+      text03: 'Eu desenvolvo para a web'
     },
     about: {
       title: 'Sobre Mim',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem nam ducimus alias necessitatibus adipisci, dolorum recusandae, quam tempora obcaecati et tempore vel debitis suscipit veritatis saepe perferendis expedita at?',
+      description: {
+        initialDescription: "Eu sou Samuel, um desenvolvedor web dedicado com experiência em React e Node.js. ",
+        descriptionHighlight01: 'React ',
+        middleText: 'e ',
+        descriptionHighlight02: 'Node.js. ',
+        finalDescription: "Através de projetos como freelancer, aprimorei minhas habilidades na criação de aplicações web fluidas que combinam um design intuitivo com funcionalidade robusta. Vamos colaborar e tornar suas ideias realidade!",
+      },
       cardCurrent: 'atual',
       work: {
         title: 'Experiência Profissional',
@@ -132,13 +144,13 @@ export const languages = {
       }
     },
     teckStack: {
-      title: 'Minha Pilha de Tecnologia',
+      title: 'Tech Stack',
       description: 'Tecnologias com as quais tenho trabalhado recentemente',
     },
     projects: {
       title: 'Projetos',
       description: 'Projetos nos quais tenho trabalhado recentemente',
-      cardLiveLink: 'ver live',
+      cardLiveLink: 'Ver live',
       cardCodeLink: 'Ver código',
       card01: {
         title: 'StudyPom',
@@ -172,7 +184,7 @@ export const languages = {
       },
     },
     contact: {
-      title: 'Para entrar em contato, por favor envie um e-mail para:'
+      title: 'Para entrar em contato, envie um e-mail para:'
     },
     footer: {
       text01: 'Projetado por',

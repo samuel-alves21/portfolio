@@ -1,15 +1,16 @@
 import styled from "styled-components"
 import { useMediaQuery } from "react-responsive"
+import { useState } from "react"
 
-import { Navigationlinks } from "./NavigationLinks"
-import { Redirectlinks } from "./Redirectlinks"
 import { breakingPoints } from "../../utils/breakingPoints"
+
 import { BurguerMenu } from "./BurguerMenu"
-import { useContext, useState } from "react"
 import { Logo } from "../Logo"
 import { ToggleBtn } from "./ToggleBtn"
-import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 import { LanguageSelector } from "./LanguageSelector"
+import { Navigationlinks } from "./NavigationLinks"
+import { Redirectlinks } from "./Redirectlinks"
+
 
 type MainWrapperProps = {
   $hasScrolled: boolean;
@@ -17,8 +18,6 @@ type MainWrapperProps = {
 
 export function Nav() {
   const [hasScrolled, setHasScrolled] = useState(false)
-
-  const { settingsState: { darkTheme } } = useContext(SettingsContext) as SettingsContextType
 
   window.onscroll = () => {
     if (window.scrollY > 50) {
@@ -30,18 +29,16 @@ export function Nav() {
 
   const lg = useMediaQuery({ query: `(max-width: ${breakingPoints.lg})` })
 
-  const moonImg = darkTheme ? 'img/moon-on.png' : 'img/moon-off.png'
-
   return (
     <MainWrapper $hasScrolled={hasScrolled}>
       <Logo />
       <LinksWrapper>
-      <LanguageSelector />
-      <ToggleWrapper>
-        <img src={moonImg} alt="sun icon" />
-        <ToggleBtn />
-      </ToggleWrapper>
-        {lg || <Navigationlinks />}
+        {lg || 
+        <>
+          <LanguageSelector />
+          <ToggleBtn />
+          <Navigationlinks />
+        </> }
         <Redirectlinks />
         {lg && <BurguerMenu />}
       </LinksWrapper>
@@ -96,15 +93,5 @@ const LinksWrapper = styled.div`
 
   @media (max-width: ${breakingPoints.lg}) {
     gap: var(--gap-2);
-  }
-`
-
-const ToggleWrapper = styled.div`
-  display: flex;
-  gap: var(--gap-2);
-  align-items: center;
-
-  & > img {
-    transform: rotate(6deg)
   }
 `

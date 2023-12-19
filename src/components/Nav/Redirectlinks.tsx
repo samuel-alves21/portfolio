@@ -4,7 +4,7 @@ export function Redirectlinks() {
   return (
     <Wrapper>
       <a href="https://github.com/samuel-alves21" target='_blank'>
-        <img src='img/github.svg' alt="giyhub icon" />
+        <img src='img/github.svg' alt="github icon" />
       </a>
       <a href="https://www.linkedin.com/in/samuel-theodoro/" target='_blank'>
         <img src='img/linkedin.svg' alt="linkedIn icon" />
