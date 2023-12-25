@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: var(--gap-1);
   align-items: center;
 
   @media (max-width: ${breakingPoints.sm}) {

@@ -63,12 +63,12 @@ export const languages = {
       },
       card02: {
         title: 'StudyPom',
-        description: 'StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions.',
-        tech: 'React, Typescript, Styled Components, Tailwind CSS',
+        description: 'The city-weather-checker communicates with the Open Weather API to fetch the latest weather data for that location. It then displays this information in an easily digestible format for the user.',
+        tech: 'Javascript, React, Styled Components',
       },
       card03: {
         title: 'StudyPom',
-        description: 'StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions.',
+        description: 'The city-weather-checker communicates with the Open Weather API to fetch the latest weather data for that location. It then displays this information in an easily digestible format for the user.',
         tech: 'React, Typescript, Styled Components, Tailwind CSS',
       },
       card04: {
@@ -158,9 +158,9 @@ export const languages = {
         tech: 'Typescript, React, Styled Components, Firebase',
       },
       card02: {
-        title: 'StudyPom',
-        description: 'O StudyPom é um aplicativo de timer baseado na técnica pomodoro, construído com TypeScript e React, que ajuda você a manter o foco e a produtividade durante suas sessões de estudo.',
-        tech: 'React, TypeScript, Styled Components, Tailwind CSS',
+        title: 'City Weather Checker',
+        description: 'O City Weather Checker comunica-se com a API do Open Weather para buscar os dados meteorológicos mais recentes daquela localização. Em seguida, exibe essas informações em um formato de fácil compreensão para o usuário.',
+        tech: 'Javascript, React, Styled Components',
       },
       card03: {
         title: 'StudyPom',

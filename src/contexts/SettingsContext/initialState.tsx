@@ -9,5 +9,5 @@ export type SettingsState = {
 export const initialState: SettingsState = {
   shouldDisplayNav: false,
   darkTheme: false,
-  language: "pt",
+  language: "en",
 }

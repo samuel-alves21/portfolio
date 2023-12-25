@@ -4,7 +4,7 @@ export type TechStackProps = {
 
 export function Stack({ techStack } :TechStackProps) {
   return (
-    <p><strong style={{color: 'var( --quaternary-color)'}}>Teck Stack: </strong>{techStack}</p>
+    <p><strong style={{color: 'var( --primary-color)'}}>Teck Stack: </strong>{techStack}</p>
   )
 }
 
