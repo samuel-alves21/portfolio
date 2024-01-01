@@ -25,20 +25,20 @@ export function Cards() {
       projectCodeLink="https://github.com/samuel-alves21/StudyPom"
       />
       <ProjectCard 
-      img="img/studyPom.png" 
+      img="img/city-weather-checker.png" 
       title={card02.title} 
       description={card02.description}
       techStack={card02.tech}
-      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
-      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      liveProjectLink="https://samuel-alves21.github.io/city-weather-checker/"
+      projectCodeLink="https://github.com/samuel-alves21/city-weather-checker"
       />
       <ProjectCard 
-      img="img/studyPom.png" 
+      img="img/gym-landingpage.png" 
       title={card03.title} 
       description={card03.description}
       techStack={card03.tech}
-      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
-      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      liveProjectLink="https://samuel-alves21.github.io/gym-landing-page/"
+      projectCodeLink="https://github.com/samuel-alves21/gym-landing-page/tree/master"
       />
       <ProjectCard 
       img="img/studyPom.png" 
@@ -70,7 +70,6 @@ export function Cards() {
 }
 
 const Wrapper = styled.div`
-  /* width: min(1100px, 100%); */
   width: 100%;
   display: grid;
   align-items: center;

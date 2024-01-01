@@ -62,14 +62,14 @@ export const languages = {
         tech: 'Typescript, React, Styled Components, Firebase',
       },
       card02: {
-        title: 'StudyPom',
+        title: 'City Weather Checker',
         description: 'The city-weather-checker communicates with the Open Weather API to fetch the latest weather data for that location. It then displays this information in an easily digestible format for the user.',
-        tech: 'Javascript, React, Styled Components',
+        tech: 'Javascript, React, Styled Components, Node, Express',
       },
       card03: {
-        title: 'StudyPom',
-        description: 'The city-weather-checker communicates with the Open Weather API to fetch the latest weather data for that location. It then displays this information in an easily digestible format for the user.',
-        tech: 'React, Typescript, Styled Components, Tailwind CSS',
+        title: 'Gym Landing Page',
+        description: 'A landing page example made with typescript and react for a challenge made by an instagram influencer, serve as an example and inspiration for a gym landingpage',
+        tech: 'React, Typescript, Styled Components',
       },
       card04: {
         title: 'StudyPom',
@@ -160,12 +160,12 @@ export const languages = {
       card02: {
         title: 'City Weather Checker',
         description: 'O City Weather Checker comunica-se com a API do Open Weather para buscar os dados meteorológicos mais recentes daquela localização. Em seguida, exibe essas informações em um formato de fácil compreensão para o usuário.',
-        tech: 'Javascript, React, Styled Components',
+        tech: 'Javascript, React, Styled Components, Node, Express'
       },
       card03: {
-        title: 'StudyPom',
-        description: 'O StudyPom é um aplicativo de timer baseado na técnica pomodoro, construído com TypeScript e React, que ajuda você a manter o foco e a produtividade durante suas sessões de estudo.',
-        tech: 'React, TypeScript, Styled Components, Tailwind CSS',
+        title: 'Gym Landing Page',
+        description: 'Um exemplo de landing page feito com TypeScript e React para um desafio proposto por um influenciador do Instagram, serve como exemplo e inspiração para uma página de destino de academia.',
+        tech: 'React, TypeScript, Styled Components',
       },
       card04: {
         title: 'StudyPom',
@@ -181,7 +181,7 @@ export const languages = {
         title: 'StudyPom',
         description: 'O StudyPom é um aplicativo de timer baseado na técnica pomodoro, construído com TypeScript e React, que ajuda você a manter o foco e a produtividade durante suas sessões de estudo.',
         tech: 'React, TypeScript, Styled Components, Tailwind CSS',
-      },
+      },  
     },
     contact: {
       title: 'Para entrar em contato, envie um e-mail para:'
