@@ -12,7 +12,7 @@ export function Cards() {
 
   const { settingsState: { language } } = useContext(SettingsContext) as SettingsContextType
 
-  const { card01, card02, card03, card04, card05, card06 }= languages[language].projects
+  const { card01, card02, card03 }= languages[language].projects
 
   return (
     <Wrapper className="section-margin">
@@ -40,7 +40,7 @@ export function Cards() {
       liveProjectLink="https://samuel-alves21.github.io/gym-landing-page/"
       projectCodeLink="https://github.com/samuel-alves21/gym-landing-page/tree/master"
       />
-      <ProjectCard 
+      {/* <ProjectCard 
       img="img/studyPom.png" 
       title={card04.title} 
       description={card04.description}
@@ -63,7 +63,7 @@ export function Cards() {
       techStack={card06.tech}
       liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
       projectCodeLink="https://github.com/samuel-alves21/StudyPom"
-      />
+      /> */}
     </Wrapper>
     
   )
@@ -86,13 +86,14 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: ${breakingPoints.lg}) {
-    width: min(650px, 100%);
-    grid-template-columns:  repeat(2, 1fr);
+    /* width: min(650px, 100%); */
+    grid-template-columns:  repeat(1, 1fr);
     gap: var(--gap-2);
+    width: min(350px, 100%);
   }
 
   @media (max-width: ${breakingPoints.md}) {
-    width: min(550px, 100%);
+    /* width: min(550px, 100%); */
   }
 
   @media (max-width: ${breakingPoints.sm}) {
