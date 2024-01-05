@@ -548,6 +548,10 @@ Valid keys: `+JSON.stringify(Object.keys(T),null,"  "));var Ce=R(V,q,W,Z,B+"."+q
   & h4 {
     text-align: left;
   }
+
+  @media (max-width: ${I.xl}) {
+    padding: 0 5px;
+  }
 `;function Wy(){const{settingsState:{language:e}}=b.useContext(he),{title:t,card01:n}=xt[e].about.work;return y.jsxs(y.Fragment,{children:[y.jsx("h1",{children:t}),y.jsx(xo,{title:n.title,description:n.description,company:n.company,location:n.location,initialMounth:n.initialMounth,initialYear:2022})]})}function Hy(){const{settingsState:{language:e}}=b.useContext(he),{title:t,card01:n}=xt[e].about.education;return y.jsxs(y.Fragment,{children:[y.jsx("h1",{children:t}),y.jsx(xo,{title:n.title,description:n.description,company:n.company,initialMounth:n.initialMounth,finalMounth:n.finalMounth,initialYear:2022,finalYear:2023})]})}function by(){const{settingsState:{language:e}}=b.useContext(he),{title:t,card01:n,card02:r}=xt[e].about.languages;return y.jsxs(y.Fragment,{children:[y.jsx("h1",{children:t}),y.jsx(xo,{title:n.title,description:n.description}),y.jsx(xo,{title:r.title,description:r.description})]})}function By(){return y.jsxs(Qy,{id:"about","data-aos":"fade-up","data-aos-duration":"1500",children:[y.jsx(Ly,{}),y.jsx(Wy,{}),y.jsx(Hy,{}),y.jsx(by,{})]})}const Qy=D.div`
   width: 50%;
   display: flex;
