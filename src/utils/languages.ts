@@ -8,7 +8,7 @@ export const languages = {
     about: {
       title: 'About Me',
       description: {
-        initialDescription: "I'm Samuel, a dedicated web developer with experience in React and Node.js. ",
+        initialDescription: "I'm Samuel, a dedicated web developer with experience in ",
         descriptionHighlight01: 'React ',
         middleText: 'and ',
         descriptionHighlight02: 'NodeJs. ',
@@ -104,7 +104,7 @@ export const languages = {
     about: {
       title: 'Sobre Mim',
       description: {
-        initialDescription: "Eu sou Samuel, um desenvolvedor web dedicado com experiência em React e Node.js. ",
+        initialDescription: "Eu sou Samuel, um desenvolvedor web dedicado com experiência em ",
         descriptionHighlight01: 'React ',
         middleText: 'e ',
         descriptionHighlight02: 'Node.js. ',
