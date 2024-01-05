@@ -95,7 +95,7 @@ const DropDown = styled.div<LanguageSelectorProps>`
   top: ${({ $lg }) => $lg ? '-10px' : '30px'};
   ${({ $lg }) => $lg ? 'right: 50px' : 'left: 0'};
   width:  ${({ $lg }) => $lg ? '180px' : '200px'};
-  padding: var(--gap-2) 0 0 0 ;
+  padding:  ${({ $lg }) => $lg ? 'var(--gap-1) 0' : 'var(--gap-2) 0 0 0'};
   background-color: ${({ $lg }) => $lg ? 'var(--mobile-nav-color)' : 'var(--nav-color)'};
   transition: background-color 0.3s ease-in-out;
 `
