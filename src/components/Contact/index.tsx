@@ -17,11 +17,12 @@ export function Contact() {
 
   return (
     <Wrapper id='contact'> 
-    { 
-      sm ? <><h5>{title}</h5> <h5 className='email'><Strong>samueltheodoro@gmail.com</Strong></h5></> :
-      lg ? <><h2>{title}</h2> <h2 className='email'><Strong>samueltheodoro@gmail.com</Strong></h2></> :
-      <><h1>{title}</h1> <h1 className='email'>samueltheodoro@gmail.com</h1></> 
-    }
+      { 
+        sm ? <><h5>{title}</h5> <h5 className='email'><Strong>samueltheodoro@gmail.com</Strong></h5></> :
+        lg ? <><h2>{title}</h2> <h2 className='email'><Strong>samueltheodoro@gmail.com</Strong></h2></> :
+        <><h1>{title}</h1> <h1 className='email'>samueltheodoro@gmail.com</h1></> 
+      }
+      <Button as='a' href="resume.pdf" download >Download CV</Button>
     </Wrapper>
   )
 }
@@ -45,4 +46,21 @@ const Wrapper = styled.div`
 
 const Strong = styled.strong`
   color: var(--primary-color)
+`
+
+const Button = styled.button`
+  margin: var(--gap-2) auto 0 auto;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  width: fit-content;
+  padding: 5px 10px;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
 `
