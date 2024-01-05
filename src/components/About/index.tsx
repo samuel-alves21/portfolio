@@ -10,7 +10,7 @@ import { Language } from "./Language"
 
 export function About() {
   return (
-    <Wrapper id="about">
+    <Wrapper id="about" data-aos="fade-up" data-aos-duration="1500">
       <AboutMe />
       <WorkExperience />
       <Education />

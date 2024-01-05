@@ -1,7 +1,10 @@
 import styled from "styled-components"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { breakingPoints } from "./utils/breakingPoints"
+
 import { Home } from "./components/Home"
 import { Nav } from "./components/Nav"
 import { TechStack } from "./components/TechStack"
@@ -11,10 +14,15 @@ import { About } from "./components/About"
 import { Contact } from "./components/Contact"
 import { Footer } from "./components/Footer"
 import { GlobalStyles } from "./Styles"
+
 import { SettingsContext, SettingsContextType } from "./contexts/SettingsContext"
 
 const App = () => {
   const { settingsState: { darkTheme } } = useContext(SettingsContext) as SettingsContextType
+
+  useEffect(() => {
+    AOS.init()
+  })
   
   return (
     <MainWrapper>

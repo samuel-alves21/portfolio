@@ -16,7 +16,7 @@ export function Contact() {
   const { title } = languages[language].contact
 
   return (
-    <Wrapper id='contact'> 
+    <Wrapper id='contact' data-aos="fade-up" data-aos-duration="1500"> 
       { 
         sm ? <><h5>{title}</h5> <h5 className='email'><Strong>samueltheodoro@gmail.com</Strong></h5></> :
         lg ? <><h2>{title}</h2> <h2 className='email'><Strong>samueltheodoro@gmail.com</Strong></h2></> :
@@ -57,7 +57,7 @@ const Button = styled.button`
   padding: 5px 10px;
   cursor: pointer;
 
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: var(--primary-color);

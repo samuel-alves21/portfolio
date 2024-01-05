@@ -14,7 +14,7 @@ export function TechStack() {
   const { title, description }= languages[language].teckStack
 
   return (
-    <Wrapper id='tech-stack'>
+    <Wrapper id='tech-stack' data-aos="fade-up" data-aos-duration="1500">
       <h1>{title}</h1>
       <h4 className="subtitle-margin">{description}</h4>
       <Icons />

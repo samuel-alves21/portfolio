@@ -12,7 +12,7 @@ export function Projects() {
   const { title, description }= languages[language].projects
 
   return (
-    <Wrapper id='projects'>
+    <Wrapper id='projects' data-aos="fade-up" data-aos-duration="1500">
       <h1>{title}</h1>
       <h4 className="subtitle-margin">{description}</h4>
       <Cards />
