@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { MainInfo, MainInfoProps } from "./MainInfo"
 import { SubInfo, SubInfoProps } from "./SubInfo"
 import { Line } from "../../Line"
+import { breakingPoints } from "../../../utils/breakingPoints"
 
 type AboutMeCardProps = MainInfoProps & SubInfoProps
 
@@ -44,6 +45,10 @@ const Wrapper = styled.div`
 
   & h4 {
     text-align: left;
+  }
+
+  @media (max-width: ${breakingPoints.xl}) {
+    padding: 0 5px;
   }
 `
 
