@@ -22,7 +22,7 @@ export function Contact() {
         lg ? <><h2>{title}</h2> <h2 className='email'><Strong>samueltheodoro@gmail.com</Strong></h2></> :
         <><h1>{title}</h1> <h1 className='email'>samueltheodoro@gmail.com</h1></> 
       }
-      <Button as='a' href="resume.pdf" download >Download CV</Button>
+      <Button as='a' href={language === "en" ? 'resume-english.pdf' : 'resume.pdf' } download >Download CV</Button>
     </Wrapper>
   )
 }
