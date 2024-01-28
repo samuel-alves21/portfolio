@@ -1,8 +1,9 @@
 import { useContext } from "react";
 
-import { AboutMeCard } from "./AboutMeCard";
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext";
+
 import { languages } from "../../utils/languages";
+import { AboutMeCard } from "./AboutMeCard";
 
 export function Language() {
 

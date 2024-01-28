@@ -1,6 +1,6 @@
+import { useMediaQuery } from "react-responsive"
 import styled from "styled-components"
 import { useContext } from "react"
-import { useMediaQuery } from "react-responsive"
 
 import { breakingPoints } from "../../utils/breakingPoints"
 import { languages } from "../../utils/languages"

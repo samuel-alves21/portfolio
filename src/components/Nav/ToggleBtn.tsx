@@ -1,6 +1,6 @@
+import { useMediaQuery } from "react-responsive"
 import { useContext, useState } from "react"
 import styled from "styled-components"
-import { useMediaQuery } from "react-responsive"
 
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 

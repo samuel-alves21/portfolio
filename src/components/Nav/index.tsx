@@ -1,15 +1,15 @@
-import styled from "styled-components"
 import { useMediaQuery } from "react-responsive"
+import styled from "styled-components"
 import { useState } from "react"
 
 import { breakingPoints } from "../../utils/breakingPoints"
 
-import { BurguerMenu } from "./BurguerMenu"
-import { Logo } from "../Logo"
-import { ToggleBtn } from "./ToggleBtn"
 import { LanguageSelector } from "./LanguageSelector"
 import { Navigationlinks } from "./NavigationLinks"
 import { Redirectlinks } from "./Redirectlinks"
+import { BurguerMenu } from "./BurguerMenu"
+import { ToggleBtn } from "./ToggleBtn"
+import { Logo } from "../Logo"
 
 
 type MainWrapperProps = {

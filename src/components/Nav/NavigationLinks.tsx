@@ -1,9 +1,11 @@
 import styled from "styled-components"
+import { useContext } from "react"
 
 import { breakingPoints } from "../../utils/breakingPoints"
-import { Link } from "../Link"
+
 import { links } from "../../utils/links"
-import { useContext } from "react"
+import { Link } from "../Link"
+
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 
 export function Navigationlinks() {

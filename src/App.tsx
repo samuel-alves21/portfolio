@@ -1,19 +1,19 @@
-import styled from "styled-components"
 import { useContext, useEffect } from "react"
-import AOS from 'aos';
+import { GlobalStyles } from "./Styles"
+import styled from "styled-components"
 import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 import { breakingPoints } from "./utils/breakingPoints"
 
-import { Home } from "./components/Home"
-import { Nav } from "./components/Nav"
+import { BuguerMenuModal } from "./components/Nav/BuguerMenuModal"
 import { TechStack } from "./components/TechStack"
 import { Projects } from "./components/Projects"
-import { BuguerMenuModal } from "./components/Nav/BuguerMenuModal"
-import { About } from "./components/About"
 import { Contact } from "./components/Contact"
 import { Footer } from "./components/Footer"
-import { GlobalStyles } from "./Styles"
+import { About } from "./components/About"
+import { Home } from "./components/Home"
+import { Nav } from "./components/Nav"
 
 import { SettingsContext, SettingsContextType } from "./contexts/SettingsContext"
 

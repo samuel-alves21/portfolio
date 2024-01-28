@@ -5,11 +5,11 @@ import { breakingPoints } from "../../../utils/breakingPoints"
 
 import { SettingsContext, SettingsContextType } from "../../../contexts/SettingsContext"
 
-import { HeaderImage, HeaderImageProps } from "./HeaderImage"
-import { Title, TitleProps } from "./Title"
-import { Description, DescriptionProps } from "./Description"
-import { Stack, TechStackProps } from "./Stack"
 import { ProjectsLinks, ProjectsLinksProps } from "./ProjectsLinks"
+import { Description, DescriptionProps } from "./Description"
+import { HeaderImage, HeaderImageProps } from "./HeaderImage"
+import { Stack, TechStackProps } from "./Stack"
+import { Title, TitleProps } from "./Title"
 
 type ProjectCardProps = HeaderImageProps & TitleProps & DescriptionProps & TechStackProps & ProjectsLinksProps
 

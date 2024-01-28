@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { MainInfo, MainInfoProps } from "./MainInfo"
 import { SubInfo, SubInfoProps } from "./SubInfo"
 import { Line } from "../../Line"
+
 import { breakingPoints } from "../../../utils/breakingPoints"
 
 type AboutMeCardProps = MainInfoProps & SubInfoProps

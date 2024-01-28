@@ -1,5 +1,5 @@
-import styled from "styled-components"
 import { useMediaQuery } from "react-responsive"
+import styled from "styled-components"
 import { useContext } from "react"
 
 import { breakingPoints } from "../../utils/breakingPoints"

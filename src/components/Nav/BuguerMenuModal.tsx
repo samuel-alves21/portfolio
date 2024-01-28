@@ -1,9 +1,9 @@
-import styled from "styled-components"
-import { useEffect, useContext } from "react"
 import { useMediaQuery } from "react-responsive"
+import { useEffect, useContext } from "react"
+import styled from "styled-components"
 
-import { links } from "../../utils/links"
 import { breakingPoints } from "../../utils/breakingPoints"
+import { links } from "../../utils/links"
 
 import { SettingsContext, SettingsContextType } from "../../contexts/SettingsContext"
 

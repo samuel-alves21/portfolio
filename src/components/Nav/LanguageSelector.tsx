@@ -1,6 +1,6 @@
-import styled from "styled-components"
 import { useContext, useEffect, useState } from "react"
 import { useMediaQuery } from "react-responsive"
+import styled from "styled-components"
 
 import { countryFlags } from "../../utils/countryFlags"
 

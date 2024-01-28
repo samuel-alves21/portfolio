@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { AboutText } from "./AboutText"
 import { AboutImg } from "./AboutImg"
+
 import { breakingPoints } from "../../utils/breakingPoints"
 
 export function Home() {

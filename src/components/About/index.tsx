@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 import { breakingPoints } from "../../utils/breakingPoints"
 
-import { AboutMe } from "./AboutMe"
 import { WorkExperience } from "./WorkExperience"
 import { Education } from "./Education"
 import { Language } from "./Language"
+import { AboutMe } from "./AboutMe"
 
 
 export function About() {
