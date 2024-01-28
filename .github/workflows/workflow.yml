@@ -11,10 +11,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps: 
-      - run: cd ../ & npm run deploy
+      - run: npm run deploy
+      
         
 
