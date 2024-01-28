@@ -11,10 +11,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-      - run: git remote add origin https://samuel-alves21:10096577Ss.@github.com/samuel-alves21/portifolio.git
+      - run: git remote set-url origin https://samuel-alves21:10096577Ss.@github.com/samuel-alves21/portifolio.git
       - run: git config --global user.email "samueltheodoro21@gmail.com"
       - run: git config --global user.name "samuel-alves21"
       - run: npm run deploy
-      
-        
-
