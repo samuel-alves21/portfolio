@@ -72,9 +72,9 @@ export const languages = {
         tech: 'React, Typescript, Styled Components',
       },
       card04: {
-        title: 'StudyPom',
-        description: 'StudyPom is a web-based pomodoro timer app built with TypeScript and React that helps you stay focused and productive during your study sessions.',
-        tech: 'React, Typescript, Styled Components, Tailwind CSS',
+        title: 'Chat Mastery',
+        description: 'ChatMastery is an interactive language learning application that allows users to practice their English speaking skills by engaging in conversations with an AI-powered chatbot.',
+        tech: 'React, Typescript, Styled Components, NodeJs, Express, OpenAi',
       },
       card05: {
         title: 'StudyPom',
@@ -168,9 +168,9 @@ export const languages = {
         tech: 'React, TypeScript, Styled Components',
       },
       card04: {
-        title: 'StudyPom',
-        description: 'O StudyPom é um aplicativo de timer baseado na técnica pomodoro, construído com TypeScript e React, que ajuda você a manter o foco e a produtividade durante suas sessões de estudo.',
-        tech: 'React, TypeScript, Styled Components, Tailwind CSS',
+        title: 'Chat Mastery',
+        description: 'ChatMastery é uma aplicação interativa de aprendizado de idiomas que permite aos usuários praticarem suas habilidades de fala em inglês engajando-se em conversas com um chatbot alimentado por inteligência artificial.',
+        tech: 'React, Typescript, Styled Components, NodeJs, Express, OpenAi',
       },
       card05: {
         title: 'StudyPom',

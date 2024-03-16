@@ -12,7 +12,7 @@ export function Cards() {
 
   const { settingsState: { language } } = useContext(SettingsContext) as SettingsContextType
 
-  const { card01, card02, card03 }= languages[language].projects
+  const { card01, card02, card03, card04 }= languages[language].projects
 
   return (
     <Wrapper className="section-margin">
@@ -40,60 +40,40 @@ export function Cards() {
       liveProjectLink="https://samuel-alves21.github.io/gym-landing-page/"
       projectCodeLink="https://github.com/samuel-alves21/gym-landing-page/tree/master"
       />
-      {/* <ProjectCard 
-      img="img/studyPom.png" 
+      <ProjectCard 
+      img="img/chat-mastery.png" 
       title={card04.title} 
       description={card04.description}
       techStack={card04.tech}
-      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
-      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
+      liveProjectLink="https://samuel-alves21.github.io/chat-mastery/"
+      projectCodeLink="https://github.com/samuel-alves21/chat-mastery"
       />
-      <ProjectCard 
-      img="img/studyPom.png" 
-      title={card05.title} 
-      description={card05.description}
-      techStack={card05.tech}
-      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
-      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
-      />
-      <ProjectCard 
-      img="img/studyPom.png" 
-      title={card06.title} 
-      description={card06.description}
-      techStack={card06.tech}
-      liveProjectLink="https://pomodoro-app-cf8c3.web.app/StudyPom"
-      projectCodeLink="https://github.com/samuel-alves21/StudyPom"
-      /> */}
     </Wrapper>
     
   )
 }
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 70%;
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns:  repeat(3, 1fr);
+  grid-template-columns:  repeat(2, 2fr);
   gap: var(--gap-5);
 
   @media (max-width: ${breakingPoints.xxl}) {
-    width: 100%;
-  }
-
-  @media (max-width: ${breakingPoints.xl}) {
-    gap: var(--gap-1);
+    width: 70%;
   }
 
   @media (max-width: ${breakingPoints.lg}) {
-    /* width: min(650px, 100%); */
+    /* width: min(650px, 60%); */
     grid-template-columns:  repeat(1, 1fr);
     gap: var(--gap-2);
     width: min(350px, 100%);
   }
 
   @media (max-width: ${breakingPoints.md}) {
-    /* width: min(550px, 100%); */
+    width: min(550px, 50%);
   }
 
   @media (max-width: ${breakingPoints.sm}) {

@@ -48,7 +48,7 @@ const Img = styled.img`
 const LinkWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: var(--gap-2);
+  gap: var(--gap-1);
 
   @media (max-width: ${breakingPoints.xl}) {
     gap: 5px;
