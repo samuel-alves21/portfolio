@@ -49,7 +49,6 @@ export function Cards() {
       projectCodeLink="https://github.com/samuel-alves21/chat-mastery"
       />
     </Wrapper>
-    
   )
 }
 
